@@ -3,7 +3,7 @@ Model-Driven Language Modernization: From Markup Languages to Modeling Language 
 
 A pantheon of Domain-Specific Languages (DSLs) have been implemented with XML Schemas. While such DSLs are well adopted and flexible, they miss modern DSL editor functionality. Moreover, since XML is primarily designed as a machine-processible format, artifacts defined with XMLbased DSLs lack comprehensibility and, therefore, maintainability.
 
-In order to tackle these [shortcomings](https://github.com/patrickneubauer/MDLM/tree/master/INDIVIDUAL%20EXPERIMENTS), we propose a bridge between the XML Schema Definition (XSD) language and text-based metamodeling frameworks. This bridge exploits existing seams between these two worlds and closes identified gaps.
+In order to tackle these shortcomings (cf. [Individial Experiments](https://github.com/patrickneubauer/MDLM/tree/master/INDIVIDUAL%20EXPERIMENTS)), we propose a bridge between the XML Schema Definition (XSD) language and text-based metamodeling frameworks. This bridge exploits existing seams between these two worlds and closes identified gaps.
 
 The [resulting approach](https://github.com/patrickneubauer/MDLM/tree/master/FRAMEWORK/XsdToXtextFramework) is able to generate Xtext-based editors from XSDs providing powerful editor functionality, customization options for the textual concrete syntax style, and round-trip transformations enabling the exchange of data between these two worlds.
 
@@ -13,5 +13,5 @@ The [results](https://github.com/patrickneubauer/MDLM/tree/master/TOSCA) show th
 #### External Resources
 
 * [OASIS TOSCA standard specification](http://docs.oasis-open.org/tosca/TOSCA/v1.0/os/TOSCA-v1.0-os.html) used to construct the DSML
-* [Cloudify YAML DSL specification](https://github.com/cloudify-cosmo/cloudify-dsl-parser/blob/b9495371723e9c59a90f76b52886f36653c88f9a/dsl_parser/parser.py), a hand-crafted DSL for TOSCA that has been used as a comparison
+* [Cloudify YAML DSL parser](https://github.com/cloudify-cosmo/cloudify-dsl-parser/blob/b9495371723e9c59a90f76b52886f36653c88f9a/dsl_parser/parser.py), a hand-crafted DSL parser for TOSCA that has been used as a comparison
 * Our prototype builds on the [Eclipse Modeling Framework](https://eclipse.org/modeling/emf/) and the [Xtext framework](https://eclipse.org/Xtext/) 
