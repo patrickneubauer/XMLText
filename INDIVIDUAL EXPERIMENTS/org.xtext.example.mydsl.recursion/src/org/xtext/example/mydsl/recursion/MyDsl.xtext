@@ -1,0 +1,18 @@
+grammar org.xtext.example.mydsl.recursion.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/recursion/MyDsl"
+
+Model:
+elements+=Element+;
+
+Element:
+Pair | Pairs
+;	
+
+Pair:
+key=STRING ":" value=STRING
+;
+
+Pairs:
+{Pairs}"(" elements+=Element* ")"
+;

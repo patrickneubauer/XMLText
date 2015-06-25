@@ -1,0 +1,4 @@
+DocumentRoot Definitions mydefid {
+	name : "mydefname" targetNamespace :
+	"http://www.example.com/tosca/ServiceTemplates/Moodle"
+}

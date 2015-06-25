@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.example.mydsl.recursion/src-gen" editDirectory="/org.xtext.example.mydsl.recursion.edit/src"
+    editorDirectory="/org.xtext.example.mydsl.recursion.editor/src" modelPluginID="org.xtext.example.mydsl.recursion"
+    forceOverwrite="true" modelName="MyDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.example.mydsl.recursion.edit"
+    editorPluginID="org.xtext.example.mydsl.recursion.editor" runtimeVersion="2.10">
+  <genPackages prefix="MyDsl" basePackage="org.xtext.example.mydsl.recursion" disposableProviderFactory="true"
+      fileExtensions="mydsl_with_recursion" ecorePackage="MyDsl.ecore#/">
+    <genClasses ecoreClass="MyDsl.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Model/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Element"/>
+    <genClasses ecoreClass="MyDsl.ecore#//Pair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Pair/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Pair/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Pairs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Pairs/elements"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

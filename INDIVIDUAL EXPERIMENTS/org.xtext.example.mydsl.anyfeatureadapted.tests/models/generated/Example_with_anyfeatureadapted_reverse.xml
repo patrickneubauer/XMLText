@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anyfeature:RootElementType xmlns:anyfeature="http://example.com/example-with-anyfeature">
+  <element1 city="Vienna" street="Favoritenstr. 9-11"/>
+  <properties>
+  	<deliveryInformation orderType="express" deliveryCountry="Austria">
+  		delivery information
+  		<deliveringTo firstName="Manuel" lastName="Wimmer">
+  			delivering to
+  		</deliveringTo>
+  	</deliveryInformation>
+  </properties>
+</anyfeature:RootElementType>
