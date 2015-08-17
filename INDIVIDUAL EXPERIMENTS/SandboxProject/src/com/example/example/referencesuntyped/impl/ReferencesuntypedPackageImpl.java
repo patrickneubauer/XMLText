@@ -285,8 +285,8 @@ public class ReferencesuntypedPackageImpl extends EPackageImpl implements Refere
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getOrderRef2_OrderDetail2() {
-		return (EReference)orderRef2EClass.getEStructuralFeatures().get(0);
+	public EAttribute getOrderRef2_OrderDetail2() {
+		return (EAttribute)orderRef2EClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -382,7 +382,7 @@ public class ReferencesuntypedPackageImpl extends EPackageImpl implements Refere
 		createEReference(orderRef1EClass, ORDER_REF1__ORDER_DETAIL1);
 
 		orderRef2EClass = createEClass(ORDER_REF2);
-		createEReference(orderRef2EClass, ORDER_REF2__ORDER_DETAIL2);
+		createEAttribute(orderRef2EClass, ORDER_REF2__ORDER_DETAIL2);
 
 		ordersTypeEClass = createEClass(ORDERS_TYPE);
 		createEReference(ordersTypeEClass, ORDERS_TYPE__ORDER1);
@@ -444,7 +444,7 @@ public class ReferencesuntypedPackageImpl extends EPackageImpl implements Refere
 		initEReference(getOrderRef1_OrderDetail1(), ecorePackage.getEObject(), null, "orderDetail1", null, 0, 1, OrderRef1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orderRef2EClass, OrderRef2.class, "OrderRef2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getOrderRef2_OrderDetail2(), ecorePackage.getEObject(), null, "orderDetail2", null, 0, 1, OrderRef2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOrderRef2_OrderDetail2(), theXMLTypePackage.getIDREF(), "orderDetail2", null, 0, 1, OrderRef2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(ordersTypeEClass, OrdersType.class, "OrdersType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOrdersType_Order1(), this.getOrderDetail1(), null, "order1", null, 1, -1, OrdersType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

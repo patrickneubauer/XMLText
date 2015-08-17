@@ -39,7 +39,7 @@
     
     <xsd:complexType name="OrderRef2">
        	<!--  adding ecore:reference="EObject" -->
-        <xsd:attribute name="orderDetail2" type="xsd:IDREF" ecore:reference="EObject"/>
+        <xsd:attribute name="orderDetail2" type="xsd:IDREF" />
     </xsd:complexType>
     
 </xsd:schema>

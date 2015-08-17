@@ -28,7 +28,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference referencesuntyped.ecore#//OrderRef1/orderDetail1"/>
     </genClasses>
     <genClasses ecoreClass="referencesuntyped.ecore#//OrderRef2">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference referencesuntyped.ecore#//OrderRef2/orderDetail2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute referencesuntyped.ecore#//OrderRef2/orderDetail2"/>
     </genClasses>
     <genClasses ecoreClass="referencesuntyped.ecore#//OrdersType">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference referencesuntyped.ecore#//OrdersType/order1"/>

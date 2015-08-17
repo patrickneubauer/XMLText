@@ -22,30 +22,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface OrderRef2 extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Order Detail2</b></em>' reference.
+	 * Returns the value of the '<em><b>Order Detail2</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Order Detail2</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Order Detail2</em>' reference.
-	 * @see #setOrderDetail2(EObject)
+	 * @return the value of the '<em>Order Detail2</em>' attribute.
+	 * @see #setOrderDetail2(String)
 	 * @see com.example.example.referencesuntyped.ReferencesuntypedPackage#getOrderRef2_OrderDetail2()
-	 * @model resolveProxies="false"
+	 * @model dataType="org.eclipse.emf.ecore.xml.type.IDREF"
 	 *        extendedMetaData="kind='attribute' name='orderDetail2'"
 	 * @generated
 	 */
-	EObject getOrderDetail2();
+	String getOrderDetail2();
 
 	/**
-	 * Sets the value of the '{@link com.example.example.referencesuntyped.OrderRef2#getOrderDetail2 <em>Order Detail2</em>}' reference.
+	 * Sets the value of the '{@link com.example.example.referencesuntyped.OrderRef2#getOrderDetail2 <em>Order Detail2</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Order Detail2</em>' reference.
+	 * @param value the new value of the '<em>Order Detail2</em>' attribute.
 	 * @see #getOrderDetail2()
 	 * @generated
 	 */
-	void setOrderDetail2(EObject value);
+	void setOrderDetail2(String value);
 
 } // OrderRef2

@@ -4,12 +4,8 @@ package com.example.example.referencesuntyped.impl;
 
 import com.example.example.referencesuntyped.OrderRef2;
 import com.example.example.referencesuntyped.ReferencesuntypedPackage;
-
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -28,14 +24,23 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class OrderRef2Impl extends MinimalEObjectImpl.Container implements OrderRef2 {
 	/**
-	 * The cached value of the '{@link #getOrderDetail2() <em>Order Detail2</em>}' reference.
+	 * The default value of the '{@link #getOrderDetail2() <em>Order Detail2</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOrderDetail2()
 	 * @generated
 	 * @ordered
 	 */
-	protected EObject orderDetail2;
+	protected static final String ORDER_DETAIL2_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getOrderDetail2() <em>Order Detail2</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrderDetail2()
+	 * @generated
+	 * @ordered
+	 */
+	protected String orderDetail2 = ORDER_DETAIL2_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,7 +66,7 @@ public class OrderRef2Impl extends MinimalEObjectImpl.Container implements Order
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EObject getOrderDetail2() {
+	public String getOrderDetail2() {
 		return orderDetail2;
 	}
 
@@ -70,8 +75,8 @@ public class OrderRef2Impl extends MinimalEObjectImpl.Container implements Order
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrderDetail2(EObject newOrderDetail2) {
-		EObject oldOrderDetail2 = orderDetail2;
+	public void setOrderDetail2(String newOrderDetail2) {
+		String oldOrderDetail2 = orderDetail2;
 		orderDetail2 = newOrderDetail2;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ReferencesuntypedPackage.ORDER_REF2__ORDER_DETAIL2, oldOrderDetail2, orderDetail2));
@@ -100,7 +105,7 @@ public class OrderRef2Impl extends MinimalEObjectImpl.Container implements Order
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ReferencesuntypedPackage.ORDER_REF2__ORDER_DETAIL2:
-				setOrderDetail2((EObject)newValue);
+				setOrderDetail2((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -115,7 +120,7 @@ public class OrderRef2Impl extends MinimalEObjectImpl.Container implements Order
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ReferencesuntypedPackage.ORDER_REF2__ORDER_DETAIL2:
-				setOrderDetail2((EObject)null);
+				setOrderDetail2(ORDER_DETAIL2_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -130,9 +135,25 @@ public class OrderRef2Impl extends MinimalEObjectImpl.Container implements Order
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ReferencesuntypedPackage.ORDER_REF2__ORDER_DETAIL2:
-				return orderDetail2 != null;
+				return ORDER_DETAIL2_EDEFAULT == null ? orderDetail2 != null : !ORDER_DETAIL2_EDEFAULT.equals(orderDetail2);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (orderDetail2: ");
+		result.append(orderDetail2);
+		result.append(')');
+		return result.toString();
 	}
 
 } //OrderRef2Impl

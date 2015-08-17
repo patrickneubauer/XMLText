@@ -436,7 +436,7 @@ public interface ReferencesuntypedPackage extends EPackage {
 	int ORDER_REF2 = 4;
 
 	/**
-	 * The feature id for the '<em><b>Order Detail2</b></em>' reference.
+	 * The feature id for the '<em><b>Order Detail2</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -699,15 +699,15 @@ public interface ReferencesuntypedPackage extends EPackage {
 	EClass getOrderRef2();
 
 	/**
-	 * Returns the meta object for the reference '{@link com.example.example.referencesuntyped.OrderRef2#getOrderDetail2 <em>Order Detail2</em>}'.
+	 * Returns the meta object for the attribute '{@link com.example.example.referencesuntyped.OrderRef2#getOrderDetail2 <em>Order Detail2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Order Detail2</em>'.
+	 * @return the meta object for the attribute '<em>Order Detail2</em>'.
 	 * @see com.example.example.referencesuntyped.OrderRef2#getOrderDetail2()
 	 * @see #getOrderRef2()
 	 * @generated
 	 */
-	EReference getOrderRef2_OrderDetail2();
+	EAttribute getOrderRef2_OrderDetail2();
 
 	/**
 	 * Returns the meta object for class '{@link com.example.example.referencesuntyped.OrdersType <em>Orders Type</em>}'.
@@ -925,12 +925,12 @@ public interface ReferencesuntypedPackage extends EPackage {
 		EClass ORDER_REF2 = eINSTANCE.getOrderRef2();
 
 		/**
-		 * The meta object literal for the '<em><b>Order Detail2</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Order Detail2</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ORDER_REF2__ORDER_DETAIL2 = eINSTANCE.getOrderRef2_OrderDetail2();
+		EAttribute ORDER_REF2__ORDER_DETAIL2 = eINSTANCE.getOrderRef2_OrderDetail2();
 
 		/**
 		 * The meta object literal for the '{@link com.example.example.referencesuntyped.impl.OrdersTypeImpl <em>Orders Type</em>}' class.
