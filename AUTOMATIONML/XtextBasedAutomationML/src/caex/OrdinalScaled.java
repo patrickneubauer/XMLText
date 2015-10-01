@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see caex.CaexPackage#getOrdinalScaled()
- * @model extendedMetaData="name='OrdinalScaledType_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface OrdinalScaled extends EObject {
@@ -33,7 +33,7 @@ public interface OrdinalScaled extends EObject {
 	 * @return the value of the '<em>Required Max Value</em>' attribute.
 	 * @see #setRequiredMaxValue(String)
 	 * @see caex.CaexPackage#getOrdinalScaled_RequiredMaxValue()
-	 * @model extendedMetaData="kind='element' name='RequiredMaxValue' namespace='##targetNamespace'"
+	 * @model
 	 * @generated
 	 */
 	String getRequiredMaxValue();
@@ -58,7 +58,7 @@ public interface OrdinalScaled extends EObject {
 	 * @return the value of the '<em>Required Value</em>' attribute.
 	 * @see #setRequiredValue(String)
 	 * @see caex.CaexPackage#getOrdinalScaled_RequiredValue()
-	 * @model extendedMetaData="kind='element' name='RequiredValue' namespace='##targetNamespace'"
+	 * @model
 	 * @generated
 	 */
 	String getRequiredValue();
@@ -83,7 +83,7 @@ public interface OrdinalScaled extends EObject {
 	 * @return the value of the '<em>Required Min Value</em>' attribute.
 	 * @see #setRequiredMinValue(String)
 	 * @see caex.CaexPackage#getOrdinalScaled_RequiredMinValue()
-	 * @model extendedMetaData="kind='element' name='RequiredMinValue' namespace='##targetNamespace'"
+	 * @model
 	 * @generated
 	 */
 	String getRequiredMinValue();

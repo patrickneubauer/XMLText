@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see caex.CaexPackage#getCopyright()
- * @model extendedMetaData="name='Copyright_._type' kind='simple'"
+ * @model
  * @generated
  */
 public interface Copyright extends EObject {
@@ -34,7 +34,6 @@ public interface Copyright extends EObject {
 	 * @see #setValue(String)
 	 * @see caex.CaexPackage#getCopyright_Value()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="name=':0' kind='simple'"
 	 * @generated
 	 */
 	String getValue();
@@ -66,7 +65,6 @@ public interface Copyright extends EObject {
 	 * @see #setChangeMode(ChangeMode)
 	 * @see caex.CaexPackage#getCopyright_ChangeMode()
 	 * @model default="state" unsettable="true"
-	 *        extendedMetaData="kind='attribute' name='ChangeMode' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	ChangeMode getChangeMode();

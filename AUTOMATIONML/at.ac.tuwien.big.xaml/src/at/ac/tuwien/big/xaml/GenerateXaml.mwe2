@@ -15,9 +15,11 @@ Workflow {
 		scanClassPath  = true
 		platformUri = "${runtimeProject}/.."
 		registerGeneratedEPackage = "caex.CaexPackage"
-		registerGenModelFile = "platform:/resource/XAML/metamodel/CAEX.genmodel"
+		registerGenModelFile = "platform:/resource/XtextBasedAutomationML/metamodel/CAEX.genmodel"
+		// start adding manual entries
 		registerGeneratedEPackage = "org.eclipse.emf.ecore.EcorePackage"
     	registerGenModelFile = "platform:/resource/org.eclipse.emf.ecore/model/Ecore.genmodel"
+		// end adding manual entries
 	}
 
 	component = DirectoryCleaner {

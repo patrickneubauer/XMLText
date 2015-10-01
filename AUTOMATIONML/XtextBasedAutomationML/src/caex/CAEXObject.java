@@ -22,7 +22,7 @@ package caex;
  * </p>
  *
  * @see caex.CaexPackage#getCAEXObject()
- * @model extendedMetaData="name='CAEXObject' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CAEXObject extends CAEXBasicObject {
@@ -37,7 +37,6 @@ public interface CAEXObject extends CAEXBasicObject {
 	 * @see #setID(String)
 	 * @see caex.CaexPackage#getCAEXObject_ID()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='ID' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getID();
@@ -63,7 +62,6 @@ public interface CAEXObject extends CAEXBasicObject {
 	 * @see #setName(String)
 	 * @see caex.CaexPackage#getCAEXObject_Name()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='Name' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getName();

@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getMapping()
- * @model extendedMetaData="name='MappingType' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Mapping extends CAEXBasicObject {
@@ -37,7 +37,6 @@ public interface Mapping extends CAEXBasicObject {
 	 * @return the value of the '<em>Attribute Name Mapping</em>' containment reference list.
 	 * @see caex.CaexPackage#getMapping_AttributeNameMapping()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='AttributeNameMapping' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<AttributeNameMapping> getAttributeNameMapping();
@@ -53,7 +52,6 @@ public interface Mapping extends CAEXBasicObject {
 	 * @return the value of the '<em>Interface Name Mapping</em>' containment reference list.
 	 * @see caex.CaexPackage#getMapping_InterfaceNameMapping()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='InterfaceNameMapping' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InterfaceNameMapping> getInterfaceNameMapping();

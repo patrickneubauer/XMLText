@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see caex.CaexPackage#getUnknownType()
- * @model extendedMetaData="name='UnknownType_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface UnknownType extends EObject {
@@ -32,7 +32,6 @@ public interface UnknownType extends EObject {
 	 * @see #setRequirements(String)
 	 * @see caex.CaexPackage#getUnknownType_Requirements()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='Requirements' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRequirements();

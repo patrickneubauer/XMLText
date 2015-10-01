@@ -18,7 +18,7 @@ package caex;
  * </p>
  *
  * @see caex.CaexPackage#getInternalElement()
- * @model extendedMetaData="name='InternalElementType' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface InternalElement extends SystemUnitClass {
@@ -33,7 +33,6 @@ public interface InternalElement extends SystemUnitClass {
 	 * @see #setRoleRequirements(RoleRequirements)
 	 * @see caex.CaexPackage#getInternalElement_RoleRequirements()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='RoleRequirements' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	RoleRequirements getRoleRequirements();
@@ -59,7 +58,6 @@ public interface InternalElement extends SystemUnitClass {
 	 * @see #setMappingObject(Mapping)
 	 * @see caex.CaexPackage#getInternalElement_MappingObject()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='MappingObject' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	Mapping getMappingObject();
@@ -85,7 +83,6 @@ public interface InternalElement extends SystemUnitClass {
 	 * @see #setRefBaseSystemUnitPath(String)
 	 * @see caex.CaexPackage#getInternalElement_RefBaseSystemUnitPath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='RefBaseSystemUnitPath' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRefBaseSystemUnitPath();

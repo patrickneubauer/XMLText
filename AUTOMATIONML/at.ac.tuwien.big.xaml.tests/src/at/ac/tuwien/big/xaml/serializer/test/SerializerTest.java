@@ -17,7 +17,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import at.ac.tuwien.big.xaml.serializer.XAMLSerializer;
-import caex.util.CaexResourceFactoryImpl;
 
 /**
  * SerializerTest
@@ -32,25 +31,6 @@ import caex.util.CaexResourceFactoryImpl;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SerializerTest {
 
-	ResourceSet resourceSet = null;
-	
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@Before
-	public void setUp() throws Exception {
-		resourceSet = new ResourceSetImpl();
-		
-		ResourceFactoryRegistryImpl.INSTANCE.getExtensionToFactoryMap()
-			.put("xaml", new CaexResourceFactoryImpl());
-	
-		ResourceFactoryRegistryImpl.INSTANCE.getExtensionToFactoryMap()
-			.put("xmi", new XMIResourceFactoryImpl());
-		
-		ResourceFactoryRegistryImpl.INSTANCE.getExtensionToFactoryMap()
-			.put("xml", new XMLResourceFactoryImpl());
-	}
-	
 	private static final String INPUT_MODEL = "models/ExampleTopology.xaml"; // must end with .xaml
 	private static final String OUTPUT_MODEL_PATH = "models/generated/"; // must end with /
 
@@ -61,13 +41,45 @@ public class SerializerTest {
 		XAMLSerializer serializer = new XAMLSerializer();
 		serializer.writeOutput(inputModelResourceURI, outputModelResourceURI, XMLResource.OPTION_EXTENDED_META_DATA);
 	}// xamlToXmiTest
-
+	
 	@Test
-	public void _3_xamlToXmlDirectlyTest() throws IOException {
-		URI inputModelResourceURI = URI.createFileURI(new File(INPUT_MODEL).getAbsolutePath());		
+	public void _2_xmiToXmlTest() throws IOException {
+		URI inputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat(".xmi")).getAbsolutePath());
 		URI outputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat(".xml")).getAbsolutePath());
 		XAMLSerializer serializer = new XAMLSerializer();
 		serializer.writeOutput(inputModelResourceURI, outputModelResourceURI, XMLResource.OPTION_EXTENDED_META_DATA);
+	}// xmiToXmlTest
+	
+	@Test
+	public void _3_xmlToXmiTest() throws IOException {
+		URI inputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat(".xml")).getAbsolutePath());		
+		URI outputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_reverse.xmi")).getAbsolutePath());
+		XAMLSerializer serializer = new XAMLSerializer();
+		serializer.writeOutput(inputModelResourceURI, outputModelResourceURI, XMLResource.OPTION_EXTENDED_META_DATA);
+	}// xmlToXmiTest
+	
+	@Test
+	public void _4_xmiToXamlTest() throws IOException {
+		URI inputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_reverse.xmi")).getAbsolutePath());
+		URI outputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_reverse.xaml")).getAbsolutePath());
+		XAMLSerializer serializer = new XAMLSerializer();
+		serializer.writeOutput(inputModelResourceURI, outputModelResourceURI, XMLResource.OPTION_EXTENDED_META_DATA);
+	}// xmiToXamlTest
+	
+	@Test
+	public void _5_xamlToXmlDirectlyTest() throws IOException {
+		URI inputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_reverse.xaml")).getAbsolutePath());
+		URI outputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_directly.xml")).getAbsolutePath());
+		XAMLSerializer serializer = new XAMLSerializer();
+		serializer.writeOutput(inputModelResourceURI, outputModelResourceURI, XMLResource.OPTION_EXTENDED_META_DATA);
 	}// xamlToXmlDirectlyTest
+
+	@Test
+	public void _6_xmlToXamlDirectlyTest() throws IOException {
+		URI inputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat(".xml")).getAbsolutePath());
+		URI outputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_directly.xaml")).getAbsolutePath());
+		XAMLSerializer serializer = new XAMLSerializer();
+		serializer.writeOutput(inputModelResourceURI, outputModelResourceURI, XMLResource.OPTION_EXTENDED_META_DATA);
+	}// xmlToXamlDirectlyTest
 
 }// SerializerTest

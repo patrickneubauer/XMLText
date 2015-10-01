@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getSystemUnitClass()
- * @model extendedMetaData="name='SystemUnitClassType' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SystemUnitClass extends CAEXObject {
@@ -40,7 +40,6 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @return the value of the '<em>Attribute</em>' containment reference list.
 	 * @see caex.CaexPackage#getSystemUnitClass_Attribute()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Attribute' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<Attribute> getAttribute();
@@ -56,7 +55,6 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @return the value of the '<em>External Interface</em>' containment reference list.
 	 * @see caex.CaexPackage#getSystemUnitClass_ExternalInterface()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='ExternalInterface' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InterfaceClass> getExternalInterface();
@@ -72,7 +70,6 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @return the value of the '<em>Internal Element</em>' containment reference list.
 	 * @see caex.CaexPackage#getSystemUnitClass_InternalElement()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='InternalElement' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InternalElement> getInternalElement();
@@ -88,7 +85,6 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @return the value of the '<em>Supported Role Class</em>' containment reference list.
 	 * @see caex.CaexPackage#getSystemUnitClass_SupportedRoleClass()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='SupportedRoleClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<SupportedRoleClass> getSupportedRoleClass();
@@ -104,7 +100,6 @@ public interface SystemUnitClass extends CAEXObject {
 	 * @return the value of the '<em>Internal Link</em>' containment reference list.
 	 * @see caex.CaexPackage#getSystemUnitClass_InternalLink()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='InternalLink' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InternalLink> getInternalLink();

@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getInstanceHierarchy()
- * @model extendedMetaData="name='InstanceHierarchy_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface InstanceHierarchy extends CAEXObject {
@@ -32,7 +32,6 @@ public interface InstanceHierarchy extends CAEXObject {
 	 * @return the value of the '<em>Internal Element</em>' containment reference list.
 	 * @see caex.CaexPackage#getInstanceHierarchy_InternalElement()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='InternalElement' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InternalElement> getInternalElement();

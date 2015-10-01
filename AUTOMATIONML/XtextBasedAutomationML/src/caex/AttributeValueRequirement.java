@@ -23,7 +23,7 @@ package caex;
  * </p>
  *
  * @see caex.CaexPackage#getAttributeValueRequirement()
- * @model extendedMetaData="name='AttributeValueRequirementType' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface AttributeValueRequirement extends CAEXBasicObject {
@@ -38,7 +38,6 @@ public interface AttributeValueRequirement extends CAEXBasicObject {
 	 * @see #setOrdinalScaledType(OrdinalScaled)
 	 * @see caex.CaexPackage#getAttributeValueRequirement_OrdinalScaledType()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='OrdinalScaledType' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	OrdinalScaled getOrdinalScaledType();
@@ -64,7 +63,6 @@ public interface AttributeValueRequirement extends CAEXBasicObject {
 	 * @see #setNominalScaledType(NominalScaled)
 	 * @see caex.CaexPackage#getAttributeValueRequirement_NominalScaledType()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='NominalScaledType' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	NominalScaled getNominalScaledType();
@@ -90,7 +88,6 @@ public interface AttributeValueRequirement extends CAEXBasicObject {
 	 * @see #setUnknownType(UnknownType)
 	 * @see caex.CaexPackage#getAttributeValueRequirement_UnknownType()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='UnknownType' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	UnknownType getUnknownType();
@@ -116,7 +113,6 @@ public interface AttributeValueRequirement extends CAEXBasicObject {
 	 * @see #setName(String)
 	 * @see caex.CaexPackage#getAttributeValueRequirement_Name()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='Name' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getName();

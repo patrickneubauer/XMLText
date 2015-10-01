@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getRoleRequirements()
- * @model extendedMetaData="name='RoleRequirements_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface RoleRequirements extends CAEXBasicObject {
@@ -34,7 +34,6 @@ public interface RoleRequirements extends CAEXBasicObject {
 	 * @return the value of the '<em>Attribute</em>' containment reference list.
 	 * @see caex.CaexPackage#getRoleRequirements_Attribute()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Attribute' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<Attribute> getAttribute();
@@ -51,7 +50,6 @@ public interface RoleRequirements extends CAEXBasicObject {
 	 * @return the value of the '<em>External Interface</em>' containment reference list.
 	 * @see caex.CaexPackage#getRoleRequirements_ExternalInterface()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='ExternalInterface' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InterfaceClass> getExternalInterface();
@@ -68,7 +66,6 @@ public interface RoleRequirements extends CAEXBasicObject {
 	 * @see #setRefBaseRoleClassPath(String)
 	 * @see caex.CaexPackage#getRoleRequirements_RefBaseRoleClassPath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='RefBaseRoleClassPath' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRefBaseRoleClassPath();

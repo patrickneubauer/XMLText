@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getInterfaceClassLib()
- * @model extendedMetaData="name='InterfaceClassLib_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface InterfaceClassLib extends CAEXObject {
@@ -32,7 +32,6 @@ public interface InterfaceClassLib extends CAEXObject {
 	 * @return the value of the '<em>Interface Class</em>' containment reference list.
 	 * @see caex.CaexPackage#getInterfaceClassLib_InterfaceClass()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='InterfaceClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InterfaceFamily> getInterfaceClass();

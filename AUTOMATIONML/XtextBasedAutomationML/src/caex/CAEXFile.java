@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getCAEXFile()
- * @model extendedMetaData="name='CAEXFile_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CAEXFile extends CAEXBasicObject {
@@ -38,7 +38,6 @@ public interface CAEXFile extends CAEXBasicObject {
 	 * @return the value of the '<em>External Reference</em>' containment reference list.
 	 * @see caex.CaexPackage#getCAEXFile_ExternalReference()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='ExternalReference' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<ExternalReference> getExternalReference();
@@ -54,7 +53,6 @@ public interface CAEXFile extends CAEXBasicObject {
 	 * @return the value of the '<em>Instance Hierarchy</em>' containment reference list.
 	 * @see caex.CaexPackage#getCAEXFile_InstanceHierarchy()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='InstanceHierarchy' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InstanceHierarchy> getInstanceHierarchy();
@@ -70,7 +68,6 @@ public interface CAEXFile extends CAEXBasicObject {
 	 * @return the value of the '<em>Interface Class Lib</em>' containment reference list.
 	 * @see caex.CaexPackage#getCAEXFile_InterfaceClassLib()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='InterfaceClassLib' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<InterfaceClassLib> getInterfaceClassLib();
@@ -86,7 +83,6 @@ public interface CAEXFile extends CAEXBasicObject {
 	 * @return the value of the '<em>Role Class Lib</em>' containment reference list.
 	 * @see caex.CaexPackage#getCAEXFile_RoleClassLib()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='RoleClassLib' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<RoleClassLib> getRoleClassLib();
@@ -102,7 +98,6 @@ public interface CAEXFile extends CAEXBasicObject {
 	 * @return the value of the '<em>System Unit Class Lib</em>' containment reference list.
 	 * @see caex.CaexPackage#getCAEXFile_SystemUnitClassLib()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='SystemUnitClassLib' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<SystemUnitClassLib> getSystemUnitClassLib();
@@ -118,7 +113,6 @@ public interface CAEXFile extends CAEXBasicObject {
 	 * @see #setFileName(String)
 	 * @see caex.CaexPackage#getCAEXFile_FileName()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='FileName' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getFileName();
@@ -147,7 +141,6 @@ public interface CAEXFile extends CAEXBasicObject {
 	 * @see #setSchemaVersion(String)
 	 * @see caex.CaexPackage#getCAEXFile_SchemaVersion()
 	 * @model default="2.15" unsettable="true" dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='SchemaVersion' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getSchemaVersion();

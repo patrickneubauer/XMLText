@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see caex.CaexPackage#getCAEXBasicObject()
- * @model extendedMetaData="name='CAEXBasicObject' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface CAEXBasicObject extends EObject {
@@ -43,7 +43,6 @@ public interface CAEXBasicObject extends EObject {
 	 * @see #setDescription(Description)
 	 * @see caex.CaexPackage#getCAEXBasicObject_Description()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Description' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	Description getDescription();
@@ -69,7 +68,6 @@ public interface CAEXBasicObject extends EObject {
 	 * @see #setVersion(Version)
 	 * @see caex.CaexPackage#getCAEXBasicObject_Version()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Version' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	Version getVersion();
@@ -95,7 +93,6 @@ public interface CAEXBasicObject extends EObject {
 	 * @return the value of the '<em>Revision</em>' containment reference list.
 	 * @see caex.CaexPackage#getCAEXBasicObject_Revision()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Revision' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<Revision> getRevision();
@@ -111,7 +108,6 @@ public interface CAEXBasicObject extends EObject {
 	 * @see #setCopyright(Copyright)
 	 * @see caex.CaexPackage#getCAEXBasicObject_Copyright()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Copyright' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	Copyright getCopyright();
@@ -137,7 +133,6 @@ public interface CAEXBasicObject extends EObject {
 	 * @return the value of the '<em>Additional Information</em>' containment reference list.
 	 * @see caex.CaexPackage#getCAEXBasicObject_AdditionalInformation()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='AdditionalInformation' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<EObject> getAdditionalInformation();
@@ -158,7 +153,6 @@ public interface CAEXBasicObject extends EObject {
 	 * @see #setChangeMode(ChangeMode)
 	 * @see caex.CaexPackage#getCAEXBasicObject_ChangeMode()
 	 * @model default="state" unsettable="true"
-	 *        extendedMetaData="kind='attribute' name='ChangeMode' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	ChangeMode getChangeMode();

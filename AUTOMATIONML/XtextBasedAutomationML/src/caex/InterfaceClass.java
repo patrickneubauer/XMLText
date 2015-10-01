@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getInterfaceClass()
- * @model extendedMetaData="name='InterfaceClassType' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface InterfaceClass extends CAEXObject {
@@ -37,7 +37,6 @@ public interface InterfaceClass extends CAEXObject {
 	 * @return the value of the '<em>Attribute</em>' containment reference list.
 	 * @see caex.CaexPackage#getInterfaceClass_Attribute()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Attribute' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<Attribute> getAttribute();
@@ -53,7 +52,6 @@ public interface InterfaceClass extends CAEXObject {
 	 * @see #setRefBaseClassPath(String)
 	 * @see caex.CaexPackage#getInterfaceClass_RefBaseClassPath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='RefBaseClassPath' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRefBaseClassPath();

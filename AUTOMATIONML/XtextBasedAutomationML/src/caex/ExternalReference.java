@@ -17,7 +17,7 @@ package caex;
  * </p>
  *
  * @see caex.CaexPackage#getExternalReference()
- * @model extendedMetaData="name='ExternalReference_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ExternalReference extends CAEXBasicObject {
@@ -32,7 +32,6 @@ public interface ExternalReference extends CAEXBasicObject {
 	 * @see #setAlias(String)
 	 * @see caex.CaexPackage#getExternalReference_Alias()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='Alias' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getAlias();
@@ -58,7 +57,6 @@ public interface ExternalReference extends CAEXBasicObject {
 	 * @see #setPath(String)
 	 * @see caex.CaexPackage#getExternalReference_Path()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='Path' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getPath();

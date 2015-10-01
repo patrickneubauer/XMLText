@@ -10,7 +10,7 @@ package caex;
  *
  *
  * @see caex.CaexPackage#getExternalInterface()
- * @model extendedMetaData="name='ExternalInterface_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface ExternalInterface extends InterfaceClass {

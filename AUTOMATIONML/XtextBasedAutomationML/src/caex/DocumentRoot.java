@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * </p>
  *
  * @see caex.CaexPackage#getDocumentRoot()
- * @model extendedMetaData="name='' kind='mixed'"
+ * @model
  * @generated
  */
 public interface DocumentRoot extends EObject {
@@ -40,7 +40,6 @@ public interface DocumentRoot extends EObject {
 	 * @return the value of the '<em>Mixed</em>' attribute list.
 	 * @see caex.CaexPackage#getDocumentRoot_Mixed()
 	 * @model unique="false" dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
-	 *        extendedMetaData="kind='elementWildcard' name=':mixed'"
 	 * @generated
 	 */
 	FeatureMap getMixed();
@@ -57,8 +56,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XMLNS Prefix Map</em>' map.
 	 * @see caex.CaexPackage#getDocumentRoot_XMLNSPrefixMap()
-	 * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" transient="true"
-	 *        extendedMetaData="kind='attribute' name='xmlns:prefix'"
+	 * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>"
 	 * @generated
 	 */
 	EMap<String, String> getXMLNSPrefixMap();
@@ -75,8 +73,7 @@ public interface DocumentRoot extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>XSI Schema Location</em>' map.
 	 * @see caex.CaexPackage#getDocumentRoot_XSISchemaLocation()
-	 * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" transient="true"
-	 *        extendedMetaData="kind='attribute' name='xsi:schemaLocation'"
+	 * @model mapType="org.eclipse.emf.ecore.EStringToStringMapEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>"
 	 * @generated
 	 */
 	EMap<String, String> getXSISchemaLocation();
@@ -91,8 +88,7 @@ public interface DocumentRoot extends EObject {
 	 * @return the value of the '<em>CAEX File</em>' containment reference.
 	 * @see #setCAEXFile(CAEXFile)
 	 * @see caex.CaexPackage#getDocumentRoot_CAEXFile()
-	 * @model containment="true" upper="-2" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="kind='element' name='CAEXFile' namespace='##targetNamespace'"
+	 * @model containment="true" upper="-2"
 	 * @generated
 	 */
 	CAEXFile getCAEXFile();

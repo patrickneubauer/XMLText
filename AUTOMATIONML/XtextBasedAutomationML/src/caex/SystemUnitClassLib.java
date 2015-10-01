@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getSystemUnitClassLib()
- * @model extendedMetaData="name='SystemUnitClassLib_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SystemUnitClassLib extends CAEXObject {
@@ -32,7 +32,6 @@ public interface SystemUnitClassLib extends CAEXObject {
 	 * @return the value of the '<em>System Unit Class</em>' containment reference list.
 	 * @see caex.CaexPackage#getSystemUnitClassLib_SystemUnitClass()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='SystemUnitClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<SystemUnitFamily> getSystemUnitClass();

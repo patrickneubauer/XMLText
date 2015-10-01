@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getSystemUnitFamily()
- * @model extendedMetaData="name='SystemUnitFamilyType' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface SystemUnitFamily extends SystemUnitClass {
@@ -37,7 +37,6 @@ public interface SystemUnitFamily extends SystemUnitClass {
 	 * @return the value of the '<em>System Unit Class</em>' containment reference list.
 	 * @see caex.CaexPackage#getSystemUnitFamily_SystemUnitClass()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='SystemUnitClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<SystemUnitFamily> getSystemUnitClass();
@@ -53,7 +52,6 @@ public interface SystemUnitFamily extends SystemUnitClass {
 	 * @see #setRefBaseClassPath(String)
 	 * @see caex.CaexPackage#getSystemUnitFamily_RefBaseClassPath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='RefBaseClassPath' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRefBaseClassPath();

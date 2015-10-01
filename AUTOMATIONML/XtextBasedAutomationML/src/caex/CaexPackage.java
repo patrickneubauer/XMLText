@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see caex.CaexFactory
  * @model kind="package"
- *        extendedMetaData="qualified='false'"
  * @generated
  */
 public interface CaexPackage extends EPackage {
@@ -3509,7 +3508,7 @@ public interface CaexPackage extends EPackage {
 	 * The meta object id for the '<em>Change Mode Object</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see caex.ChangeMode
+	 * @see org.eclipse.emf.common.util.Enumerator
 	 * @see caex.impl.CaexPackageImpl#getChangeModeObject()
 	 * @generated
 	 */
@@ -4776,19 +4775,17 @@ public interface CaexPackage extends EPackage {
 	 * @return the meta object for data type '<em>Attribute Data Type</em>'.
 	 * @see java.lang.String
 	 * @model instanceClass="java.lang.String"
-	 *        extendedMetaData="name='AttributeDataType_._type' baseType='http://www.eclipse.org/emf/2003/XMLType#string'"
 	 * @generated
 	 */
 	EDataType getAttributeDataType();
 
 	/**
-	 * Returns the meta object for data type '{@link caex.ChangeMode <em>Change Mode Object</em>}'.
+	 * Returns the meta object for data type '{@link org.eclipse.emf.common.util.Enumerator <em>Change Mode Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Change Mode Object</em>'.
-	 * @see caex.ChangeMode
-	 * @model instanceClass="caex.ChangeMode"
-	 *        extendedMetaData="name='ChangeMode:Object' baseType='ChangeMode'"
+	 * @see org.eclipse.emf.common.util.Enumerator
+	 * @model instanceClass="org.eclipse.emf.common.util.Enumerator"
 	 * @generated
 	 */
 	EDataType getChangeModeObject();
@@ -5834,7 +5831,7 @@ public interface CaexPackage extends EPackage {
 		 * The meta object literal for the '<em>Change Mode Object</em>' data type.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see caex.ChangeMode
+		 * @see org.eclipse.emf.common.util.Enumerator
 		 * @see caex.impl.CaexPackageImpl#getChangeModeObject()
 		 * @generated
 		 */

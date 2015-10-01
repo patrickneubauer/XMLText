@@ -6,6 +6,7 @@ import caex.CAEXFile;
 import caex.CaexPackage;
 import caex.DocumentRoot;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EMap;
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EStringToStringMapEntryImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -69,6 +71,16 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @ordered
 	 */
 	protected EMap<String, String> xSISchemaLocation;
+
+	/**
+	 * The cached value of the '{@link #getCAEXFile() <em>CAEX File</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCAEXFile()
+	 * @generated
+	 * @ordered
+	 */
+	protected CAEXFile cAEXFile;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,7 +143,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public CAEXFile getCAEXFile() {
-		return (CAEXFile)getMixed().get(CaexPackage.Literals.DOCUMENT_ROOT__CAEX_FILE, true);
+		return cAEXFile;
 	}
 
 	/**
@@ -140,7 +152,13 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public NotificationChain basicSetCAEXFile(CAEXFile newCAEXFile, NotificationChain msgs) {
-		return ((FeatureMap.Internal)getMixed()).basicAdd(CaexPackage.Literals.DOCUMENT_ROOT__CAEX_FILE, newCAEXFile, msgs);
+		CAEXFile oldCAEXFile = cAEXFile;
+		cAEXFile = newCAEXFile;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CaexPackage.DOCUMENT_ROOT__CAEX_FILE, oldCAEXFile, newCAEXFile);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -149,7 +167,17 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 	 * @generated
 	 */
 	public void setCAEXFile(CAEXFile newCAEXFile) {
-		((FeatureMap.Internal)getMixed()).set(CaexPackage.Literals.DOCUMENT_ROOT__CAEX_FILE, newCAEXFile);
+		if (newCAEXFile != cAEXFile) {
+			NotificationChain msgs = null;
+			if (cAEXFile != null)
+				msgs = ((InternalEObject)cAEXFile).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CaexPackage.DOCUMENT_ROOT__CAEX_FILE, null, msgs);
+			if (newCAEXFile != null)
+				msgs = ((InternalEObject)newCAEXFile).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CaexPackage.DOCUMENT_ROOT__CAEX_FILE, null, msgs);
+			msgs = basicSetCAEXFile(newCAEXFile, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, CaexPackage.DOCUMENT_ROOT__CAEX_FILE, newCAEXFile, newCAEXFile));
 	}
 
 	/**
@@ -258,7 +286,7 @@ public class DocumentRootImpl extends MinimalEObjectImpl.Container implements Do
 			case CaexPackage.DOCUMENT_ROOT__XSI_SCHEMA_LOCATION:
 				return xSISchemaLocation != null && !xSISchemaLocation.isEmpty();
 			case CaexPackage.DOCUMENT_ROOT__CAEX_FILE:
-				return getCAEXFile() != null;
+				return cAEXFile != null;
 		}
 		return super.eIsSet(featureID);
 	}

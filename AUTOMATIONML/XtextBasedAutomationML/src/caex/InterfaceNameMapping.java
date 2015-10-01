@@ -17,7 +17,7 @@ package caex;
  * </p>
  *
  * @see caex.CaexPackage#getInterfaceNameMapping()
- * @model extendedMetaData="name='InterfaceNameMapping_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface InterfaceNameMapping extends CAEXBasicObject {
@@ -33,7 +33,6 @@ public interface InterfaceNameMapping extends CAEXBasicObject {
 	 * @see #setRoleInterfaceName(String)
 	 * @see caex.CaexPackage#getInterfaceNameMapping_RoleInterfaceName()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='RoleInterfaceName' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRoleInterfaceName();
@@ -60,7 +59,6 @@ public interface InterfaceNameMapping extends CAEXBasicObject {
 	 * @see #setSystemUnitInterfaceName(String)
 	 * @see caex.CaexPackage#getInterfaceNameMapping_SystemUnitInterfaceName()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='SystemUnitInterfaceName' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getSystemUnitInterfaceName();

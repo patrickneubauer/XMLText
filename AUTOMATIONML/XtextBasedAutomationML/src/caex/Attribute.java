@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getAttribute()
- * @model extendedMetaData="name='AttributeType' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Attribute extends CAEXObject {
@@ -42,7 +42,6 @@ public interface Attribute extends CAEXObject {
 	 * @return the value of the '<em>Ref Semantic</em>' containment reference list.
 	 * @see caex.CaexPackage#getAttribute_RefSemantic()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='RefSemantic' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<RefSemantic> getRefSemantic();
@@ -58,7 +57,6 @@ public interface Attribute extends CAEXObject {
 	 * @return the value of the '<em>Constraint</em>' containment reference list.
 	 * @see caex.CaexPackage#getAttribute_Constraint()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Constraint' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<AttributeValueRequirement> getConstraint();
@@ -74,7 +72,6 @@ public interface Attribute extends CAEXObject {
 	 * @return the value of the '<em>Attribute</em>' containment reference list.
 	 * @see caex.CaexPackage#getAttribute_Attribute()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='Attribute' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<Attribute> getAttribute();
@@ -90,7 +87,6 @@ public interface Attribute extends CAEXObject {
 	 * @see #setAttributeDataType(String)
 	 * @see caex.CaexPackage#getAttribute_AttributeDataType()
 	 * @model dataType="caex.AttributeDataType"
-	 *        extendedMetaData="kind='attribute' name='AttributeDataType' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getAttributeDataType();
@@ -116,7 +112,6 @@ public interface Attribute extends CAEXObject {
 	 * @see #setUnit(String)
 	 * @see caex.CaexPackage#getAttribute_Unit()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='attribute' name='Unit' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getUnit();
@@ -141,7 +136,7 @@ public interface Attribute extends CAEXObject {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
 	 * @see caex.CaexPackage#getAttribute_Value()
-	 * @model extendedMetaData="kind='element' name='Value' namespace='##targetNamespace'"
+	 * @model
 	 * @generated
 	 */
 	String getValue();
@@ -166,7 +161,7 @@ public interface Attribute extends CAEXObject {
 	 * @return the value of the '<em>Default Value</em>' attribute.
 	 * @see #setDefaultValue(String)
 	 * @see caex.CaexPackage#getAttribute_DefaultValue()
-	 * @model extendedMetaData="kind='element' name='DefaultValue' namespace='##targetNamespace'"
+	 * @model
 	 * @generated
 	 */
 	String getDefaultValue();

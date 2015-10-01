@@ -17,7 +17,7 @@ package caex;
  * </p>
  *
  * @see caex.CaexPackage#getAttributeNameMapping()
- * @model extendedMetaData="name='AttributeNameMapping_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface AttributeNameMapping extends CAEXBasicObject {
@@ -33,7 +33,6 @@ public interface AttributeNameMapping extends CAEXBasicObject {
 	 * @see #setRoleAttributeName(String)
 	 * @see caex.CaexPackage#getAttributeNameMapping_RoleAttributeName()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='RoleAttributeName' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getRoleAttributeName();
@@ -60,7 +59,6 @@ public interface AttributeNameMapping extends CAEXBasicObject {
 	 * @see #setSystemUnitAttributeName(String)
 	 * @see caex.CaexPackage#getAttributeNameMapping_SystemUnitAttributeName()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='SystemUnitAttributeName' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getSystemUnitAttributeName();

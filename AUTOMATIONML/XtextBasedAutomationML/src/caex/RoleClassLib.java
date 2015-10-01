@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see caex.CaexPackage#getRoleClassLib()
- * @model extendedMetaData="name='RoleClassLib_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface RoleClassLib extends CAEXObject {
@@ -32,7 +32,6 @@ public interface RoleClassLib extends CAEXObject {
 	 * @return the value of the '<em>Role Class</em>' containment reference list.
 	 * @see caex.CaexPackage#getRoleClassLib_RoleClass()
 	 * @model containment="true"
-	 *        extendedMetaData="kind='element' name='RoleClass' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	EList<RoleFamily> getRoleClass();

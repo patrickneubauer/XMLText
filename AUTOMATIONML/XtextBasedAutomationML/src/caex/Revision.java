@@ -21,7 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * </p>
  *
  * @see caex.CaexPackage#getRevision()
- * @model extendedMetaData="name='Revision_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface Revision extends CAEXBasicObject {
@@ -37,7 +37,6 @@ public interface Revision extends CAEXBasicObject {
 	 * @see #setRevisionDate(XMLGregorianCalendar)
 	 * @see caex.CaexPackage#getRevision_RevisionDate()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.DateTime" required="true"
-	 *        extendedMetaData="kind='element' name='RevisionDate' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	XMLGregorianCalendar getRevisionDate();
@@ -64,7 +63,6 @@ public interface Revision extends CAEXBasicObject {
 	 * @see #setOldVersion(String)
 	 * @see caex.CaexPackage#getRevision_OldVersion()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='OldVersion' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getOldVersion();
@@ -91,7 +89,6 @@ public interface Revision extends CAEXBasicObject {
 	 * @see #setNewVersion(String)
 	 * @see caex.CaexPackage#getRevision_NewVersion()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='NewVersion' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getNewVersion();
@@ -118,7 +115,6 @@ public interface Revision extends CAEXBasicObject {
 	 * @see #setAuthorName(String)
 	 * @see caex.CaexPackage#getRevision_AuthorName()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='element' name='AuthorName' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getAuthorName();
@@ -145,7 +141,6 @@ public interface Revision extends CAEXBasicObject {
 	 * @see #setComment(String)
 	 * @see caex.CaexPackage#getRevision_Comment()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
-	 *        extendedMetaData="kind='element' name='Comment' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getComment();

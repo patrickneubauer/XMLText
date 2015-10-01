@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see caex.CaexPackage#getChangeMode()
- * @model extendedMetaData="name='ChangeMode'"
+ * @model
  * @generated
  */
 public enum ChangeMode implements Enumerator {

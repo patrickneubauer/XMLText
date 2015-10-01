@@ -34,10 +34,6 @@ public class XAMLSerializer {
 	 * @throws IOException is thrown, e.g., when input file or metamodel cannot be found
 	 */
 	public void writeOutput(URI inputModelURI, URI outputModelURI, String... writeOptions) throws IOException {
-		CaexPackage caexPackage = CaexPackageImpl.init(); 
-//		System.out.println(caexPackage.eNS_URI);
-//		System.out.println(caexPackage.eINSTANCE);
-		
 		// XAML Standalone Setup if used in non-plugin project
 		XamlStandaloneSetup.doSetup();
 		CaexPackage.eINSTANCE.eClass(); // instead of manually registering "xaml"
@@ -48,27 +44,17 @@ public class XAMLSerializer {
 		
 		// create the resource set and add extended meta data to read/write options
 		ResourceSet resourceSet = new ResourceSetImpl();
-
-		EPackage.Registry ePackageRegistry = resourceSet.getPackageRegistry();
-		ePackageRegistry.put(CaexPackage.eNS_URI, CaexPackage.eINSTANCE);
-
 		final ExtendedMetaData extendedMetaData = new BasicExtendedMetaData(resourceSet.getPackageRegistry());
 		Map<Object,Object> optionsMap = new HashMap<Object,Object>();
 		for (String option : writeOptions) {
 			optionsMap.put(option, extendedMetaData);
 		}
 
-		
-		// load referenced model first?
-//		URI referencedResourceModelURI = URI.createFileURI(new File("models/Moodle-by-Iaas/Definitions/modified/TOSCA-v1.0-BaseTypes-Definitions-modified.xml").getAbsolutePath());
-//		Resource referencedResource = resourceSet.getResource(referencedResourceModelURI, true);
-		
 		// load input model from file		
 		Resource inputResource = resourceSet.getResource(inputModelURI, true);
-		
 				
 		// resolve cross-references
-		EcoreUtil.resolveAll(inputResource);		
+		//EcoreUtil.resolveAll(inputResource);		
 
 		// create output model resource by copying contents of input model
 		Resource outputResource = resourceSet.createResource(outputModelURI);

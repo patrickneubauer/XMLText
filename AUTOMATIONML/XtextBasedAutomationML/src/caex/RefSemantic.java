@@ -16,7 +16,7 @@ package caex;
  * </p>
  *
  * @see caex.CaexPackage#getRefSemantic()
- * @model extendedMetaData="name='RefSemantic_._type' kind='elementOnly'"
+ * @model
  * @generated
  */
 public interface RefSemantic extends CAEXBasicObject {
@@ -32,7 +32,6 @@ public interface RefSemantic extends CAEXBasicObject {
 	 * @see #setCorrespondingAttributePath(String)
 	 * @see caex.CaexPackage#getRefSemantic_CorrespondingAttributePath()
 	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
-	 *        extendedMetaData="kind='attribute' name='CorrespondingAttributePath' namespace='##targetNamespace'"
 	 * @generated
 	 */
 	String getCorrespondingAttributePath();

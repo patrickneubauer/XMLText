@@ -8,8 +8,6 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EPackage;
 
-import org.eclipse.emf.ecore.impl.EPackageRegistryImpl;
-
 import org.eclipse.emf.ecore.resource.Resource;
 
 import org.eclipse.emf.ecore.xmi.util.XMLProcessor;
@@ -29,8 +27,8 @@ public class CaexXMLProcessor extends XMLProcessor {
 	 * @generated
 	 */
 	public CaexXMLProcessor() {
-		super(new EPackageRegistryImpl(EPackage.Registry.INSTANCE));
-		extendedMetaData.putPackage(null, CaexPackage.eINSTANCE);
+		super((EPackage.Registry.INSTANCE));
+		CaexPackage.eINSTANCE.eClass();
 	}
 	
 	/**
