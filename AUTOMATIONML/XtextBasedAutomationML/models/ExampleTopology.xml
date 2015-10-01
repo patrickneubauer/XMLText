@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
-<CAEXFile_._type FileName="ExampleTopology.xaml" SchemaVersion="2.15">
-  <ExternalReference Alias="BaseRoleClassLib" Path="Libs/RoleClass Libraries/AutomationMLBaseRoleClassLib.xaml"/>
-  <ExternalReference Alias="BaseInterfaceClassLib" Path="Libs/InterfaceClass Libraries/AutomationMLInterfaceClassLib.xaml"/>
+<CAEXFile_._type FileName="ExampleTopology.amltext" SchemaVersion="2.15">
+  <ExternalReference Alias="BaseRoleClassLib" Path="Libs/RoleClass Libraries/AutomationMLBaseRoleClassLib.amltext"/>
+  <ExternalReference Alias="BaseInterfaceClassLib" Path="Libs/InterfaceClass Libraries/AutomationMLInterfaceClassLib.amltext"/>
   <InstanceHierarchy Name="ManufacturingSystem">
     <InternalElement ID="{788eb291-f103-4fdc-aba0-4893b599f556}" Name="firstScrewdriver" RefBaseSystemUnitPath="LibOfCommonTools/ElectricScrewdriver">
       <Attribute Name="New Attribute"/>
