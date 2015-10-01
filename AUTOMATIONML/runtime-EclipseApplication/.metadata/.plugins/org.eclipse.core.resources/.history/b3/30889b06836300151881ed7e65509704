@@ -1,0 +1,81 @@
+CAEXFile {
+	fileName "ExampleTopology.xaml"
+	schemaVersion "2.15"
+	
+	externalReference {
+		ExternalReference {
+			alias "BaseRoleClassLib"
+			path "Libs/RoleClass Libraries/AutomationMLBaseRoleClassLib.xaml"
+		},
+		ExternalReference {
+			alias "BaseInterfaceClassLib"
+			path "Libs/InterfaceClass Libraries/AutomationMLInterfaceClassLib.xaml"
+		}
+	}
+	
+	instanceHierarchy {
+		InstanceHierarchy {
+			name "ManufacturingSystem"
+			internalElement {
+				
+				InternalElement {
+					iD "{788eb291-f103-4fdc-aba0-4893b599f556}"
+					name "firstScrewdriver"
+					refBaseSystemUnitPath "LibOfCommonTools/ElectricScrewdriver"
+					 
+					attribute {
+						Attribute {
+							name "New Attribute"
+						}
+					}
+					
+					externalInterface {
+						ExternalInterface {
+							iD "{5f535d4c-dd46-4c1c-898c-4e58419048b6}"
+							name "EnergySupply"
+							refBaseClassPath "MyInterfaces/Energy"
+						}
+					}
+					
+					supportedRoleClass {
+						SupportedRoleClass {
+							refRoleClassPath "ManufacturingRoleClasses/Tool"
+						}						
+					}
+					
+					roleRequirements RoleRequirements {
+						
+					}
+					
+				},
+				
+				InternalElement {
+					iD "{19dcf818-4716-4fc1-a85f-28e1938c4c3a}"
+					name "secondScrewdriver"
+					refBaseSystemUnitPath "LibOfCommonTools/ElectricScrewdriver"
+					 
+					attribute {
+						Attribute {
+							name "New Attribute"
+						}
+					}
+					
+					externalInterface {
+						ExternalInterface {
+							iD "50e10905-ac18-413c-afab-ad8ed1569fff"
+							name "EnergySupply"
+							refBaseClassPath "MyInterfaces/Energy"
+						}
+					}
+					
+					supportedRoleClass {
+						SupportedRoleClass {
+							refRoleClassPath "ManufacturingRoleClasses/Tool"
+						}						
+					}
+				}
+								
+			}
+		}		
+	}	
+}

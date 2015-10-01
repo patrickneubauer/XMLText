@@ -1,0 +1,10 @@
+CAEXFile {
+	fileName "myfile.file"
+	schemaVersion "myschemaversion"
+	
+	externalReference {
+		ExternalReference {
+			
+		}
+	}
+}

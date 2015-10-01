@@ -1,0 +1,10 @@
+CAEXFile {
+	fileName "ExampleTopology.xaml"
+	schemaVersion "myschemaversion"
+	
+	externalReference {
+		ExternalReference {
+			
+		}
+	}
+}

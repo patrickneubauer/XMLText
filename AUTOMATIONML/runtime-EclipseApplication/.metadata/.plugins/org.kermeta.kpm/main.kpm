@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<kpm:KPM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:kpm="http://www.kermeta.org/kpm">
+  <filters xsi:type="kpm:NameFilter" regex="*.kmt"/>
+  <filters xsi:type="kpm:NameFilter" regex="*.km"/>
+  <filters xsi:type="kpm:NameFilter" regex="*.ecore"/>
+  <rules event="//@events.0" name="Update KMT Files">
+    <outs extensionPoint="org.kermeta.kpm.actions.unloadcontext"/>
+    <outs extensionPoint="org.kermeta.kpm.actions.loadcontext"/>
+    <outs extensionPoint="org.kermeta.kpm.actions.typecheckcontext"/>
+    <outs extensionPoint="org.kermeta.kpm.actions.removedependencies"/>
+    <outs extensionPoint="org.kermeta.kpm.actions.createdependencies"/>
+    <outs extensionPoint="org.kermeta.kpm.actions.addmarkers"/>
+    <outs extensionPoint="org.kermeta.kpm.actions.finalizeUpdate"/>
+    <precondition xsi:type="kpm:FilterExpression" filter="//@filters.0"/>
+  </rules>
+  <events name="update"/>
+</kpm:KPM>
