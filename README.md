@@ -1,5 +1,4 @@
 ![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.svg)
-
 # XMLText
 XMLText: From XML Schema to Xtext
 
@@ -13,6 +12,8 @@ The resulting approach (cf. [Individial Experiments](https://github.com/patrickn
 
 We evaluate our approach by a case study on TOSCA, which is an XML-based standard for defining Cloud deployments.
 The [results](https://github.com/patrickneubauer/XMLText/tree/master/TOSCA) show that our approach enables bridging XMLware and Modelware in several ways going beyond existing approaches and allows the automated generation of editors that are at least equivalent to editors manually built for XML-based languages.
+
+See also [XMLText Project Website](http://xmltext.big.tuwien.ac.at).
 
 #### External Resources
 
