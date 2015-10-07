@@ -1,4 +1,5 @@
 # XMLText
+![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.svg)
 XMLText: From XML Schema to Xtext
 
 A multitude of Domain-Specific Languages (DSLs) have been implemented with XML Schemas.
