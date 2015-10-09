@@ -13,14 +13,14 @@ CAEXFile returns CAEXFile:
 		'schemaVersion' schemaVersion=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)* )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)* )?
-		( externalReference+=ExternalReference ( "," externalReference+=ExternalReference)* )?
-		( instanceHierarchy+=InstanceHierarchy ( "," instanceHierarchy+=InstanceHierarchy)* )?
-		( interfaceClassLib+=InterfaceClassLib ( "," interfaceClassLib+=InterfaceClassLib)* )?
-		( roleClassLib+=RoleClassLib ( "," roleClassLib+=RoleClassLib)* )?
-		( systemUnitClassLib+=SystemUnitClassLib ( "," systemUnitClassLib+=SystemUnitClassLib)* )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('externalReference' '{' externalReference+=ExternalReference ( "," externalReference+=ExternalReference)* '}' )?
+		('instanceHierarchy' '{' instanceHierarchy+=InstanceHierarchy ( "," instanceHierarchy+=InstanceHierarchy)* '}' )?
+		('interfaceClassLib' '{' interfaceClassLib+=InterfaceClassLib ( "," interfaceClassLib+=InterfaceClassLib)* '}' )?
+		('roleClassLib' '{' roleClassLib+=RoleClassLib ( "," roleClassLib+=RoleClassLib)* '}' )?
+		('systemUnitClassLib' '{' systemUnitClassLib+=SystemUnitClassLib ( "," systemUnitClassLib+=SystemUnitClassLib)* '}' )?
 	'}';
 	
 InterfaceClass returns InterfaceClass:
@@ -53,9 +53,9 @@ Revision returns Revision:
 		('comment' comment=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)* )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)* )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 	'}';
 
 Copyright returns Copyright:
@@ -82,9 +82,9 @@ ExternalReference returns ExternalReference:
 		'path' path=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)* )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)* )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 	'}';
 
 InstanceHierarchy returns InstanceHierarchy:
@@ -95,10 +95,10 @@ InstanceHierarchy returns InstanceHierarchy:
 		'name' name=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)* )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)* )?
-		( internalElement+=InternalElement ( "," internalElement+=InternalElement)* )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('internalElement' '{' internalElement+=InternalElement ( "," internalElement+=InternalElement)* '}' )?
 	'}';
 
 InterfaceClassLib returns InterfaceClassLib:
@@ -109,10 +109,10 @@ InterfaceClassLib returns InterfaceClassLib:
 		'name' name=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)* )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( interfaceClass+=InterfaceFamily ( "," interfaceClass+=InterfaceFamily)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('interfaceClass' '{' interfaceClass+=InterfaceFamily ( "," interfaceClass+=InterfaceFamily)* '}' )?
 	'}';
 
 RoleClassLib returns RoleClassLib:
@@ -123,10 +123,10 @@ RoleClassLib returns RoleClassLib:
 		'name' name=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( roleClass+=RoleFamily ( "," roleClass+=RoleFamily)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('roleClass' '{' roleClass+=RoleFamily ( "," roleClass+=RoleFamily)* '}' )?
 	'}';
 
 SystemUnitClassLib returns SystemUnitClassLib:
@@ -137,10 +137,10 @@ SystemUnitClassLib returns SystemUnitClassLib:
 		'name' name=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( systemUnitClass+=SystemUnitFamily ( "," systemUnitClass+=SystemUnitFamily)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('systemUnitClass' '{' systemUnitClass+=SystemUnitFamily ( "," systemUnitClass+=SystemUnitFamily)* '}' )?
 	'}';
 
 String0 returns type::String:
@@ -158,14 +158,14 @@ InternalElement returns InternalElement:
 		('refBaseSystemUnitPath' refBaseSystemUnitPath=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
-		( externalInterface+=InterfaceClass ( "," externalInterface+=InterfaceClass)*  )?
-		( internalElement+=InternalElement ( "," internalElement+=InternalElement)*  )?
-		( supportedRoleClass+=SupportedRoleClass ( "," supportedRoleClass+=SupportedRoleClass)*  )?
-		( internalLink+=InternalLink ( "," internalLink+=InternalLink)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
+		('externalInterface' '{' externalInterface+=InterfaceClass ( "," externalInterface+=InterfaceClass)* '}' )?
+		('internalElement' '{' internalElement+=InternalElement ( "," internalElement+=InternalElement)* '}' )?
+		('supportedRoleClass' '{' supportedRoleClass+=SupportedRoleClass ( "," supportedRoleClass+=SupportedRoleClass)* '}' )?
+		('internalLink' '{' internalLink+=InternalLink ( "," internalLink+=InternalLink)* '}' )?
 		('roleRequirements' roleRequirements=RoleRequirements)?
 		('mappingObject' mappingObject=Mapping)?
 	'}';
@@ -182,12 +182,12 @@ Attribute returns Attribute:
 		('defaultValue' defaultValue=EString)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( refSemantic+=RefSemantic ( "," refSemantic+=RefSemantic)*  )?
-		( constraint+=AttributeValueRequirement ( "," constraint+=AttributeValueRequirement)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('refSemantic' '{' refSemantic+=RefSemantic ( "," refSemantic+=RefSemantic)* '}' )?
+		('constraint' '{' constraint+=AttributeValueRequirement ( "," constraint+=AttributeValueRequirement)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
 	'}';
 
 InterfaceClass_Impl returns InterfaceClass:
@@ -199,10 +199,10 @@ InterfaceClass_Impl returns InterfaceClass:
 		('refBaseClassPath' refBaseClassPath=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
 	'}';
 
 SupportedRoleClass returns SupportedRoleClass:
@@ -212,9 +212,9 @@ SupportedRoleClass returns SupportedRoleClass:
 		'refRoleClassPath' refRoleClassPath=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 		('mappingObject' mappingObject=Mapping)?
 	'}';
 
@@ -228,9 +228,9 @@ InternalLink returns InternalLink:
 		('refPartnerSideB' refPartnerSideB=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 	'}';
 
 RoleRequirements returns RoleRequirements:
@@ -241,11 +241,11 @@ RoleRequirements returns RoleRequirements:
 		('refBaseRoleClassPath' refBaseRoleClassPath=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
-		( externalInterface+=InterfaceClass ( "," externalInterface+=InterfaceClass)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
+		('externalInterface' '{' externalInterface+=InterfaceClass ( "," externalInterface+=InterfaceClass)* '}' )?
 	'}';
 
 Mapping returns Mapping:
@@ -255,11 +255,11 @@ Mapping returns Mapping:
 		('changeMode' changeMode=ChangeMode)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attributeNameMapping+=AttributeNameMapping ( "," attributeNameMapping+=AttributeNameMapping)*  )?
-		( interfaceNameMapping+=InterfaceNameMapping ( "," interfaceNameMapping+=InterfaceNameMapping)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attributeNameMapping' '{' attributeNameMapping+=AttributeNameMapping ( "," attributeNameMapping+=AttributeNameMapping)* '}' )?
+		('interfaceNameMapping' '{' interfaceNameMapping+=InterfaceNameMapping ( "," interfaceNameMapping+=InterfaceNameMapping)* '}' )?
 	'}';
 
 RefSemantic returns RefSemantic:
@@ -269,9 +269,9 @@ RefSemantic returns RefSemantic:
 		'correspondingAttributePath' correspondingAttributePath=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 	'}';
 
 AttributeValueRequirement returns AttributeValueRequirement:
@@ -281,9 +281,9 @@ AttributeValueRequirement returns AttributeValueRequirement:
 		'name' name=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 		('ordinalScaledType' ordinalScaledType=OrdinalScaled)?
 		('nominalScaledType' nominalScaledType=NominalScaled)?
 		('unknownType' unknownType=UnknownType)?
@@ -327,10 +327,10 @@ ExternalInterface returns ExternalInterface:
 		('refBaseClassPath' refBaseClassPath=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
 	'}';
 
 InterfaceFamily returns InterfaceFamily:
@@ -342,11 +342,11 @@ InterfaceFamily returns InterfaceFamily:
 		('refBaseClassPath' refBaseClassPath=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
-		( interfaceClass+=InterfaceFamily ( "," interfaceClass+=InterfaceFamily)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
+		('interfaceClass' '{' interfaceClass+=InterfaceFamily ( "," interfaceClass+=InterfaceFamily)* '}' )?
 	'}';
 
 AttributeNameMapping returns AttributeNameMapping:
@@ -357,9 +357,9 @@ AttributeNameMapping returns AttributeNameMapping:
 		'systemUnitAttributeName' systemUnitAttributeName=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 	'}';
 
 InterfaceNameMapping returns InterfaceNameMapping:
@@ -370,9 +370,9 @@ InterfaceNameMapping returns InterfaceNameMapping:
 		'systemUnitInterfaceName' systemUnitInterfaceName=STRING
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
 	'}';
 
 RoleFamily returns RoleFamily:
@@ -384,12 +384,12 @@ RoleFamily returns RoleFamily:
 		('refBaseClassPath' refBaseClassPath=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
-		( externalInterface+=ExternalInterface ( "," externalInterface+=ExternalInterface)*  )?
-		( roleClass+=RoleFamily ( "," roleClass+=RoleFamily)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
+		('externalInterface' '{' externalInterface+=ExternalInterface ( "," externalInterface+=ExternalInterface)* '}' )?
+		('roleClass' '{' roleClass+=RoleFamily ( "," roleClass+=RoleFamily)* '}' )?
 	'}';
 
 SystemUnitFamily returns SystemUnitFamily:
@@ -401,13 +401,13 @@ SystemUnitFamily returns SystemUnitFamily:
 		('refBaseClassPath' refBaseClassPath=STRING)?
 		('description' description=Description)?
 		('version' version=Version)?
-		( revision+=Revision ( "," revision+=Revision)*  )?
+		('revision' '{' revision+=Revision ( "," revision+=Revision)* '}' )?
 		('copyright' copyright=Copyright)?
-		( additionalInformation+=EObject ( "," additionalInformation+=EObject)*  )?
-		( attribute+=Attribute ( "," attribute+=Attribute)*  )?
-		( externalInterface+=InterfaceClass ( "," externalInterface+=InterfaceClass)*  )?
-		( internalElement+=InternalElement ( "," internalElement+=InternalElement)*  )?
-		( supportedRoleClass+=SupportedRoleClass ( "," supportedRoleClass+=SupportedRoleClass)*  )?
-		( internalLink+=InternalLink ( "," internalLink+=InternalLink)*  )?
-		( systemUnitClass+=SystemUnitFamily ( "," systemUnitClass+=SystemUnitFamily)*  )?
+		('additionalInformation' '{' additionalInformation+=EObject ( "," additionalInformation+=EObject)* '}' )?
+		('attribute' '{' attribute+=Attribute ( "," attribute+=Attribute)* '}' )?
+		('externalInterface' '{' externalInterface+=InterfaceClass ( "," externalInterface+=InterfaceClass)* '}' )?
+		('internalElement' '{' internalElement+=InternalElement ( "," internalElement+=InternalElement)* '}' )?
+		('supportedRoleClass' '{' supportedRoleClass+=SupportedRoleClass ( "," supportedRoleClass+=SupportedRoleClass)* '}' )?
+		('internalLink' '{' internalLink+=InternalLink ( "," internalLink+=InternalLink)* '}' )?
+		('systemUnitClass' '{' systemUnitClass+=SystemUnitFamily ( "," systemUnitClass+=SystemUnitFamily)* '}' )?
 	'}';

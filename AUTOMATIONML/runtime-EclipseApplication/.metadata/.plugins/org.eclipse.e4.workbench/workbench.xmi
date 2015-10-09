@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_lEgwYGOEEeWlXOpCbgv-lQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_lEgwYWOEEeWlXOpCbgv-lQ" bindingContexts="_lEg0iGOEEeWlXOpCbgv-lQ">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;at.ac.tuwien.big.amltext.AMLText&quot; name=&quot;ExampleTopology.amltext&quot; tooltip=&quot;AMLTextModeling/ExampleTopology.amltext&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AMLTextModeling/ExampleTopology.amltext&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;ExampleTopology.xaml&quot; tooltip=&quot;AMLTextModeling/ExampleTopology.xaml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AMLTextModeling/ExampleTopology.xaml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;at.ac.tuwien.big.xaml.Xaml&quot; name=&quot;ExampleTopology.xaml&quot; tooltip=&quot;XAMLmodeling/ExampleTopology.xaml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/XAMLmodeling/ExampleTopology.xaml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;at.ac.tuwien.big.xaml.Xaml&quot; name=&quot;testmodel.xaml&quot; tooltip=&quot;TestProject/testmodel.xaml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestProject/testmodel.xaml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.xtext.example.mydsl.MyDsl&quot; name=&quot;testmodel.mydsl&quot; tooltip=&quot;TestProject/testmodel.mydsl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestProject/testmodel.mydsl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;at.ac.tuwien.big.xaml.Xaml&quot; name=&quot;ExampleTopology.xaml&quot; tooltip=&quot;XAMLmodeling/ExampleTopology.xaml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/XAMLmodeling/ExampleTopology.xaml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;at.ac.tuwien.big.xaml.Xaml&quot; name=&quot;testmodel.xaml&quot; tooltip=&quot;TestProject/testmodel.xaml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestProject/testmodel.xaml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.xtext.example.mydsl.MyDsl&quot; name=&quot;testmodel.mydsl&quot; tooltip=&quot;TestProject/testmodel.mydsl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestProject/testmodel.mydsl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_lEgwYWOEEeWlXOpCbgv-lQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_lEgwYmOEEeWlXOpCbgv-lQ" label="%trimmedwindow.label.eclipseSDK" x="651" y="121" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_lEgwYWOEEeWlXOpCbgv-lQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_lEgwYmOEEeWlXOpCbgv-lQ" label="%trimmedwindow.label.eclipseSDK" x="2028" y="263" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1443175873414"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_lEgwYmOEEeWlXOpCbgv-lQ" selectedElement="_lEgwY2OEEeWlXOpCbgv-lQ" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_lEgwY2OEEeWlXOpCbgv-lQ" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_lEgwZGOEEeWlXOpCbgv-lQ">
         <children xsi:type="advanced:Perspective" xmi:id="_lEgwZGOEEeWlXOpCbgv-lQ" elementId="org.eclipse.ui.resourcePerspective" selectedElement="_lEgwZWOEEeWlXOpCbgv-lQ" label="Resource" iconURI="platform:/plugin/org.eclipse.ui.ide.application/icons/full/eview16/resource_persp.png">
@@ -121,15 +122,15 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_lEgxp2OEEeWlXOpCbgv-lQ" elementId="org.eclipse.ui.editorss" selectedElement="_lEgxqGOEEeWlXOpCbgv-lQ">
-      <children xsi:type="basic:PartStack" xmi:id="_lEgxqGOEEeWlXOpCbgv-lQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_0nAG8GzREeWNZITZ3HmlTg">
+      <children xsi:type="basic:PartStack" xmi:id="_lEgxqGOEEeWlXOpCbgv-lQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_HG_wYGXMEeWIMof3sOv_Zw">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_0nAG8GzREeWNZITZ3HmlTg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ExampleTopology.amltext" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;at.ac.tuwien.big.amltext.AMLText&quot; name=&quot;ExampleTopology.amltext&quot; partName=&quot;ExampleTopology.amltext&quot; title=&quot;ExampleTopology.amltext&quot; tooltip=&quot;AMLTextModeling/ExampleTopology.amltext&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AMLTextModeling/ExampleTopology.amltext&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;962&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_HG_wYGXMEeWIMof3sOv_Zw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ExampleTopology.xaml" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;at.ac.tuwien.big.xaml.Xaml&quot; name=&quot;ExampleTopology.xaml&quot; partName=&quot;ExampleTopology.xaml&quot; title=&quot;ExampleTopology.xaml&quot; tooltip=&quot;XAMLmodeling/ExampleTopology.xaml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/XAMLmodeling/ExampleTopology.xaml&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;220&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
-          <tags>at.ac.tuwien.big.amltext.AMLText</tags>
+          <tags>at.ac.tuwien.big.xaml.Xaml</tags>
           <tags>removeOnHide</tags>
           <tags>active</tags>
           <tags>activeOnClose</tags>
@@ -236,7 +237,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lEgyFmOEEeWlXOpCbgv-lQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_7wx-gWz8EeWIdoli-RSO6g" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_lEm-UmOEEeWlXOpCbgv-lQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_QS--0GXMEeWiNdYTiP-Jmg" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_lEm-UmOEEeWlXOpCbgv-lQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lEgyJ2OEEeWlXOpCbgv-lQ" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -260,7 +261,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lEgyW2OEEeWlXOpCbgv-lQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_7w7IcGz8EeWIdoli-RSO6g" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_lEm97GOEEeWlXOpCbgv-lQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_QTQromXMEeWiNdYTiP-Jmg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_lEm97GOEEeWlXOpCbgv-lQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_lEgyZmOEEeWlXOpCbgv-lQ" elementId="org.xtext.example.mydsl.MyDsl" visible="false">
         <tags>Draggable</tags>
@@ -2781,7 +2782,6 @@
   <commands xmi:id="_lEm_0GOEEeWlXOpCbgv-lQ" elementId="AUTOGEN:::org.eclipse.pde.ui.logViewActions/org.eclipse.jdt.debug.ui.LogViewActions.showStackTrace" commandName="Show Stack Trace in Console View" description="Show Stack Trace in Console View" category="_lEnADGOEEeWlXOpCbgv-lQ"/>
   <commands xmi:id="_lEm_0WOEEeWlXOpCbgv-lQ" elementId="at.ac.big.tuwien.xaml.Xaml.validate" commandName="Validate" description="Trigger expensive validation" category="_lEnADGOEEeWlXOpCbgv-lQ"/>
   <commands xmi:id="_lEm_0mOEEeWlXOpCbgv-lQ" elementId="at.ac.tuwien.big.xaml.Xaml.validate" commandName="Validate" description="Trigger expensive validation" category="_lEnADGOEEeWlXOpCbgv-lQ"/>
-  <commands xmi:id="_mNwJcWzREeWNZITZ3HmlTg" elementId="at.ac.tuwien.big.amltext.AMLText.validate" commandName="Validate" description="Trigger expensive validation" category="_lEnADGOEEeWlXOpCbgv-lQ"/>
   <addons xmi:id="_lEm_02OEEeWlXOpCbgv-lQ" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_lEm_1GOEEeWlXOpCbgv-lQ" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_lEm_1WOEEeWlXOpCbgv-lQ" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>

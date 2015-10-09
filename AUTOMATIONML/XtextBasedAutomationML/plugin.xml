@@ -20,5 +20,4 @@
             type="caex"
             class="caex.util.CaexResourceFactoryImpl"/>
    </extension>
-
 </plugin>
