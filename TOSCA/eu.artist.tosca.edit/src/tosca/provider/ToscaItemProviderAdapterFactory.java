@@ -2165,52 +2165,6 @@ public class ToscaItemProviderAdapterFactory extends ToscaAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link tosca.EFeatureMapType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapTypeItemProvider eFeatureMapTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link tosca.EFeatureMapType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapTypeAdapter() {
-		if (eFeatureMapTypeItemProvider == null) {
-			eFeatureMapTypeItemProvider = new EFeatureMapTypeItemProvider(this);
-		}
-
-		return eFeatureMapTypeItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link tosca.EFeatureMapEntryType} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EFeatureMapEntryTypeItemProvider eFeatureMapEntryTypeItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link tosca.EFeatureMapEntryType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEFeatureMapEntryTypeAdapter() {
-		if (eFeatureMapEntryTypeItemProvider == null) {
-			eFeatureMapEntryTypeItemProvider = new EFeatureMapEntryTypeItemProvider(this);
-		}
-
-		return eFeatureMapEntryTypeItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2400,8 +2354,6 @@ public class ToscaItemProviderAdapterFactory extends ToscaAdapterFactory impleme
 		if (typesTypeItemProvider != null) typesTypeItemProvider.dispose();
 		if (validSourceTypeItemProvider != null) validSourceTypeItemProvider.dispose();
 		if (validTargetTypeItemProvider != null) validTargetTypeItemProvider.dispose();
-		if (eFeatureMapTypeItemProvider != null) eFeatureMapTypeItemProvider.dispose();
-		if (eFeatureMapEntryTypeItemProvider != null) eFeatureMapEntryTypeItemProvider.dispose();
 	}
 
 }

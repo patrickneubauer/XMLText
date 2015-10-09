@@ -2,15 +2,22 @@
  */
 package tosca.impl;
 
+import java.util.Collection;
+
 import javax.xml.namespace.QName;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import tosca.PropertiesType;
 import tosca.PropertyConstraintsType;
@@ -35,14 +42,14 @@ import tosca.ToscaPackage;
  */
 public abstract class TEntityTemplateImpl extends TExtensibleElementsImpl implements TEntityTemplate {
 	/**
-	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference.
+	 * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProperties()
 	 * @generated
 	 * @ordered
 	 */
-	protected PropertiesType properties;
+	protected EList<PropertiesType> properties;
 
 	/**
 	 * The cached value of the '{@link #getPropertyConstraints() <em>Property Constraints</em>}' containment reference.
@@ -118,42 +125,11 @@ public abstract class TEntityTemplateImpl extends TExtensibleElementsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PropertiesType getProperties() {
+	public EList<PropertiesType> getProperties() {
+		if (properties == null) {
+			properties = new EObjectContainmentEList<PropertiesType>(PropertiesType.class, this, ToscaPackage.TENTITY_TEMPLATE__PROPERTIES);
+		}
 		return properties;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetProperties(PropertiesType newProperties, NotificationChain msgs) {
-		PropertiesType oldProperties = properties;
-		properties = newProperties;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.TENTITY_TEMPLATE__PROPERTIES, oldProperties, newProperties);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProperties(PropertiesType newProperties) {
-		if (newProperties != properties) {
-			NotificationChain msgs = null;
-			if (properties != null)
-				msgs = ((InternalEObject)properties).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.TENTITY_TEMPLATE__PROPERTIES, null, msgs);
-			if (newProperties != null)
-				msgs = ((InternalEObject)newProperties).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.TENTITY_TEMPLATE__PROPERTIES, null, msgs);
-			msgs = basicSetProperties(newProperties, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.TENTITY_TEMPLATE__PROPERTIES, newProperties, newProperties));
 	}
 
 	/**
@@ -250,7 +226,7 @@ public abstract class TEntityTemplateImpl extends TExtensibleElementsImpl implem
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTIES:
-				return basicSetProperties(null, msgs);
+				return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTY_CONSTRAINTS:
 				return basicSetPropertyConstraints(null, msgs);
 		}
@@ -282,11 +258,13 @@ public abstract class TEntityTemplateImpl extends TExtensibleElementsImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTIES:
-				setProperties((PropertiesType)newValue);
+				getProperties().clear();
+				getProperties().addAll((Collection<? extends PropertiesType>)newValue);
 				return;
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTY_CONSTRAINTS:
 				setPropertyConstraints((PropertyConstraintsType)newValue);
@@ -310,7 +288,7 @@ public abstract class TEntityTemplateImpl extends TExtensibleElementsImpl implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTIES:
-				setProperties((PropertiesType)null);
+				getProperties().clear();
 				return;
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTY_CONSTRAINTS:
 				setPropertyConstraints((PropertyConstraintsType)null);
@@ -334,7 +312,7 @@ public abstract class TEntityTemplateImpl extends TExtensibleElementsImpl implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTIES:
-				return properties != null;
+				return properties != null && !properties.isEmpty();
 			case ToscaPackage.TENTITY_TEMPLATE__PROPERTY_CONSTRAINTS:
 				return propertyConstraints != null;
 			case ToscaPackage.TENTITY_TEMPLATE__ID:

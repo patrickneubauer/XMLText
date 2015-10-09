@@ -1775,13 +1775,13 @@ public interface ToscaPackage extends EPackage {
 	int PROPERTIES_TYPE = 24;
 
 	/**
-	 * The feature id for the '<em><b>Map</b></em>' containment reference.
+	 * The feature id for the '<em><b>Any</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTIES_TYPE__MAP = 0;
+	int PROPERTIES_TYPE__ANY = 0;
 
 	/**
 	 * The number of structural features of the '<em>Properties Type</em>' class.
@@ -2457,7 +2457,7 @@ public interface ToscaPackage extends EPackage {
 	int TENTITY_TEMPLATE__ANY_ATTRIBUTE = TEXTENSIBLE_ELEMENTS__ANY_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2548,7 +2548,7 @@ public interface ToscaPackage extends EPackage {
 	int TARTIFACT_TEMPLATE__ANY_ATTRIBUTE = TENTITY_TEMPLATE__ANY_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2975,7 +2975,7 @@ public interface ToscaPackage extends EPackage {
 	int TCAPABILITY__ANY_ATTRIBUTE = TENTITY_TEMPLATE__ANY_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4026,7 +4026,7 @@ public interface ToscaPackage extends EPackage {
 	int TNODE_TEMPLATE__ANY_ATTRIBUTE = TENTITY_TEMPLATE__ANY_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -4880,7 +4880,7 @@ public interface ToscaPackage extends EPackage {
 	int TPOLICY_TEMPLATE__ANY_ATTRIBUTE = TENTITY_TEMPLATE__ANY_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5226,7 +5226,7 @@ public interface ToscaPackage extends EPackage {
 	int TRELATIONSHIP_TEMPLATE__ANY_ATTRIBUTE = TENTITY_TEMPLATE__ANY_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5726,7 +5726,7 @@ public interface ToscaPackage extends EPackage {
 	int TREQUIREMENT__ANY_ATTRIBUTE = TENTITY_TEMPLATE__ANY_ATTRIBUTE;
 
 	/**
-	 * The feature id for the '<em><b>Properties</b></em>' containment reference.
+	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -6502,98 +6502,6 @@ public interface ToscaPackage extends EPackage {
 	int VALID_TARGET_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link tosca.impl.EFeatureMapTypeImpl <em>EFeature Map Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see tosca.impl.EFeatureMapTypeImpl
-	 * @see tosca.impl.ToscaPackageImpl#getEFeatureMapType()
-	 * @generated
-	 */
-	int EFEATURE_MAP_TYPE = 93;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_TYPE__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Property Key Value Pair</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_TYPE__PROPERTY_KEY_VALUE_PAIR = 1;
-
-	/**
-	 * The number of structural features of the '<em>EFeature Map Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_TYPE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>EFeature Map Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link tosca.impl.EFeatureMapEntryTypeImpl <em>EFeature Map Entry Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see tosca.impl.EFeatureMapEntryTypeImpl
-	 * @see tosca.impl.ToscaPackageImpl#getEFeatureMapEntryType()
-	 * @generated
-	 */
-	int EFEATURE_MAP_ENTRY_TYPE = 94;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_ENTRY_TYPE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_ENTRY_TYPE__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>EFeature Map Entry Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_ENTRY_TYPE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>EFeature Map Entry Type</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EFEATURE_MAP_ENTRY_TYPE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link tosca.MaxInstancesTypeMember1 <em>Max Instances Type Member1</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6601,7 +6509,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getMaxInstancesTypeMember1()
 	 * @generated
 	 */
-	int MAX_INSTANCES_TYPE_MEMBER1 = 95;
+	int MAX_INSTANCES_TYPE_MEMBER1 = 93;
 
 	/**
 	 * The meta object id for the '{@link tosca.TBoolean <em>TBoolean</em>}' enum.
@@ -6611,7 +6519,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getTBoolean()
 	 * @generated
 	 */
-	int TBOOLEAN = 96;
+	int TBOOLEAN = 94;
 
 	/**
 	 * The meta object id for the '{@link tosca.UpperBoundTypeMember1 <em>Upper Bound Type Member1</em>}' enum.
@@ -6621,7 +6529,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundTypeMember1()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE_MEMBER1 = 97;
+	int UPPER_BOUND_TYPE_MEMBER1 = 95;
 
 	/**
 	 * The meta object id for the '{@link tosca.UpperBoundTypeMember11 <em>Upper Bound Type Member11</em>}' enum.
@@ -6631,7 +6539,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundTypeMember11()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE_MEMBER11 = 98;
+	int UPPER_BOUND_TYPE_MEMBER11 = 96;
 
 	/**
 	 * The meta object id for the '<em>Imported URI</em>' data type.
@@ -6641,7 +6549,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getImportedURI()
 	 * @generated
 	 */
-	int IMPORTED_URI = 99;
+	int IMPORTED_URI = 97;
 
 	/**
 	 * The meta object id for the '<em>Max Instances Type</em>' data type.
@@ -6651,7 +6559,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getMaxInstancesType()
 	 * @generated
 	 */
-	int MAX_INSTANCES_TYPE = 100;
+	int MAX_INSTANCES_TYPE = 98;
 
 	/**
 	 * The meta object id for the '<em>Max Instances Type Member0</em>' data type.
@@ -6661,7 +6569,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getMaxInstancesTypeMember0()
 	 * @generated
 	 */
-	int MAX_INSTANCES_TYPE_MEMBER0 = 101;
+	int MAX_INSTANCES_TYPE_MEMBER0 = 99;
 
 	/**
 	 * The meta object id for the '<em>Max Instances Type Member1 Object</em>' data type.
@@ -6671,7 +6579,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getMaxInstancesTypeMember1Object()
 	 * @generated
 	 */
-	int MAX_INSTANCES_TYPE_MEMBER1_OBJECT = 102;
+	int MAX_INSTANCES_TYPE_MEMBER1_OBJECT = 100;
 
 	/**
 	 * The meta object id for the '<em>TBoolean Object</em>' data type.
@@ -6681,7 +6589,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getTBooleanObject()
 	 * @generated
 	 */
-	int TBOOLEAN_OBJECT = 103;
+	int TBOOLEAN_OBJECT = 101;
 
 	/**
 	 * The meta object id for the '<em>Upper Bound Type</em>' data type.
@@ -6691,7 +6599,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundType()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE = 104;
+	int UPPER_BOUND_TYPE = 102;
 
 	/**
 	 * The meta object id for the '<em>Upper Bound Type1</em>' data type.
@@ -6701,7 +6609,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundType1()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE1 = 105;
+	int UPPER_BOUND_TYPE1 = 103;
 
 	/**
 	 * The meta object id for the '<em>Upper Bound Type Member0</em>' data type.
@@ -6711,7 +6619,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundTypeMember0()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE_MEMBER0 = 106;
+	int UPPER_BOUND_TYPE_MEMBER0 = 104;
 
 	/**
 	 * The meta object id for the '<em>Upper Bound Type Member01</em>' data type.
@@ -6721,7 +6629,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundTypeMember01()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE_MEMBER01 = 107;
+	int UPPER_BOUND_TYPE_MEMBER01 = 105;
 
 	/**
 	 * The meta object id for the '<em>Upper Bound Type Member1 Object</em>' data type.
@@ -6731,7 +6639,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundTypeMember1Object()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE_MEMBER1_OBJECT = 108;
+	int UPPER_BOUND_TYPE_MEMBER1_OBJECT = 106;
 
 	/**
 	 * The meta object id for the '<em>Upper Bound Type Member1 Object1</em>' data type.
@@ -6741,7 +6649,7 @@ public interface ToscaPackage extends EPackage {
 	 * @see tosca.impl.ToscaPackageImpl#getUpperBoundTypeMember1Object1()
 	 * @generated
 	 */
-	int UPPER_BOUND_TYPE_MEMBER1_OBJECT1 = 109;
+	int UPPER_BOUND_TYPE_MEMBER1_OBJECT1 = 107;
 
 
 	/**
@@ -7314,15 +7222,15 @@ public interface ToscaPackage extends EPackage {
 	EClass getPropertiesType();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link tosca.PropertiesType#getMap <em>Map</em>}'.
+	 * Returns the meta object for the attribute list '{@link tosca.PropertiesType#getAny <em>Any</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Map</em>'.
-	 * @see tosca.PropertiesType#getMap()
+	 * @return the meta object for the attribute list '<em>Any</em>'.
+	 * @see tosca.PropertiesType#getAny()
 	 * @see #getPropertiesType()
 	 * @generated
 	 */
-	EReference getPropertiesType_Map();
+	EAttribute getPropertiesType_Any();
 
 	/**
 	 * Returns the meta object for class '{@link tosca.PropertiesTypeWithPropertyMappings <em>Properties Type With Property Mappings</em>}'.
@@ -8363,10 +8271,10 @@ public interface ToscaPackage extends EPackage {
 	EClass getTEntityTemplate();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link tosca.TEntityTemplate#getProperties <em>Properties</em>}'.
+	 * Returns the meta object for the containment reference list '{@link tosca.TEntityTemplate#getProperties <em>Properties</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Properties</em>'.
+	 * @return the meta object for the containment reference list '<em>Properties</em>'.
 	 * @see tosca.TEntityTemplate#getProperties()
 	 * @see #getTEntityTemplate()
 	 * @generated
@@ -10161,70 +10069,6 @@ public interface ToscaPackage extends EPackage {
 	EAttribute getValidTargetType_TypeRef();
 
 	/**
-	 * Returns the meta object for class '{@link tosca.EFeatureMapType <em>EFeature Map Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EFeature Map Type</em>'.
-	 * @see tosca.EFeatureMapType
-	 * @generated
-	 */
-	EClass getEFeatureMapType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link tosca.EFeatureMapType#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see tosca.EFeatureMapType#getId()
-	 * @see #getEFeatureMapType()
-	 * @generated
-	 */
-	EAttribute getEFeatureMapType_Id();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link tosca.EFeatureMapType#getPropertyKeyValuePair <em>Property Key Value Pair</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Property Key Value Pair</em>'.
-	 * @see tosca.EFeatureMapType#getPropertyKeyValuePair()
-	 * @see #getEFeatureMapType()
-	 * @generated
-	 */
-	EReference getEFeatureMapType_PropertyKeyValuePair();
-
-	/**
-	 * Returns the meta object for class '{@link tosca.EFeatureMapEntryType <em>EFeature Map Entry Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EFeature Map Entry Type</em>'.
-	 * @see tosca.EFeatureMapEntryType
-	 * @generated
-	 */
-	EClass getEFeatureMapEntryType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link tosca.EFeatureMapEntryType#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see tosca.EFeatureMapEntryType#getName()
-	 * @see #getEFeatureMapEntryType()
-	 * @generated
-	 */
-	EAttribute getEFeatureMapEntryType_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link tosca.EFeatureMapEntryType#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see tosca.EFeatureMapEntryType#getValue()
-	 * @see #getEFeatureMapEntryType()
-	 * @generated
-	 */
-	EAttribute getEFeatureMapEntryType_Value();
-
-	/**
 	 * Returns the meta object for enum '{@link tosca.MaxInstancesTypeMember1 <em>Max Instances Type Member1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10902,12 +10746,12 @@ public interface ToscaPackage extends EPackage {
 		EClass PROPERTIES_TYPE = eINSTANCE.getPropertiesType();
 
 		/**
-		 * The meta object literal for the '<em><b>Map</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Any</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROPERTIES_TYPE__MAP = eINSTANCE.getPropertiesType_Map();
+		EAttribute PROPERTIES_TYPE__ANY = eINSTANCE.getPropertiesType_Any();
 
 		/**
 		 * The meta object literal for the '{@link tosca.impl.PropertiesTypeWithPropertyMappingsImpl <em>Properties Type With Property Mappings</em>}' class.
@@ -11744,7 +11588,7 @@ public interface ToscaPackage extends EPackage {
 		EClass TENTITY_TEMPLATE = eINSTANCE.getTEntityTemplate();
 
 		/**
-		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -13156,58 +13000,6 @@ public interface ToscaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VALID_TARGET_TYPE__TYPE_REF = eINSTANCE.getValidTargetType_TypeRef();
-
-		/**
-		 * The meta object literal for the '{@link tosca.impl.EFeatureMapTypeImpl <em>EFeature Map Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see tosca.impl.EFeatureMapTypeImpl
-		 * @see tosca.impl.ToscaPackageImpl#getEFeatureMapType()
-		 * @generated
-		 */
-		EClass EFEATURE_MAP_TYPE = eINSTANCE.getEFeatureMapType();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EFEATURE_MAP_TYPE__ID = eINSTANCE.getEFeatureMapType_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Property Key Value Pair</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EFEATURE_MAP_TYPE__PROPERTY_KEY_VALUE_PAIR = eINSTANCE.getEFeatureMapType_PropertyKeyValuePair();
-
-		/**
-		 * The meta object literal for the '{@link tosca.impl.EFeatureMapEntryTypeImpl <em>EFeature Map Entry Type</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see tosca.impl.EFeatureMapEntryTypeImpl
-		 * @see tosca.impl.ToscaPackageImpl#getEFeatureMapEntryType()
-		 * @generated
-		 */
-		EClass EFEATURE_MAP_ENTRY_TYPE = eINSTANCE.getEFeatureMapEntryType();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EFEATURE_MAP_ENTRY_TYPE__NAME = eINSTANCE.getEFeatureMapEntryType_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EFEATURE_MAP_ENTRY_TYPE__VALUE = eINSTANCE.getEFeatureMapEntryType_Value();
 
 		/**
 		 * The meta object literal for the '{@link tosca.MaxInstancesTypeMember1 <em>Max Instances Type Member1</em>}' enum.

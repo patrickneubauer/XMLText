@@ -841,24 +841,6 @@ public interface ToscaFactory extends EFactory {
 	ValidTargetType createValidTargetType();
 
 	/**
-	 * Returns a new object of class '<em>EFeature Map Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EFeature Map Type</em>'.
-	 * @generated
-	 */
-	EFeatureMapType createEFeatureMapType();
-
-	/**
-	 * Returns a new object of class '<em>EFeature Map Entry Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EFeature Map Entry Type</em>'.
-	 * @generated
-	 */
-	EFeatureMapEntryType createEFeatureMapEntryType();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

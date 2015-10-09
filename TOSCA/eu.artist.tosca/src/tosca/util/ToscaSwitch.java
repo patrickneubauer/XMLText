@@ -670,18 +670,6 @@ public class ToscaSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ToscaPackage.EFEATURE_MAP_TYPE: {
-				EFeatureMapType eFeatureMapType = (EFeatureMapType)theEObject;
-				T result = caseEFeatureMapType(eFeatureMapType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ToscaPackage.EFEATURE_MAP_ENTRY_TYPE: {
-				EFeatureMapEntryType eFeatureMapEntryType = (EFeatureMapEntryType)theEObject;
-				T result = caseEFeatureMapEntryType(eFeatureMapEntryType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -2078,36 +2066,6 @@ public class ToscaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseValidTargetType(ValidTargetType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EFeature Map Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EFeature Map Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEFeatureMapType(EFeatureMapType object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EFeature Map Entry Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EFeature Map Entry Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEFeatureMapEntryType(EFeatureMapEntryType object) {
 		return null;
 	}
 

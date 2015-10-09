@@ -4,6 +4,8 @@ package tosca;
 
 import org.eclipse.emf.ecore.EObject;
 
+import org.eclipse.emf.ecore.util.FeatureMap;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Properties Type</b></em>'.
@@ -12,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link tosca.PropertiesType#getMap <em>Map</em>}</li>
+ *   <li>{@link tosca.PropertiesType#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -21,30 +23,20 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface PropertiesType extends EObject {
-
 	/**
-	 * Returns the value of the '<em><b>Map</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Any</b></em>' attribute list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Map</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Any</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Map</em>' containment reference.
-	 * @see #setMap(EFeatureMapType)
-	 * @see tosca.ToscaPackage#getPropertiesType_Map()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Any</em>' attribute list.
+	 * @see tosca.ToscaPackage#getPropertiesType_Any()
+	 * @model dataType="org.eclipse.emf.ecore.EFeatureMapEntry" required="true" many="false"
 	 * @generated
 	 */
-	EFeatureMapType getMap();
+	FeatureMap getAny();
 
-	/**
-	 * Sets the value of the '{@link tosca.PropertiesType#getMap <em>Map</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Map</em>' containment reference.
-	 * @see #getMap()
-	 * @generated
-	 */
-	void setMap(EFeatureMapType value);
 } // PropertiesType

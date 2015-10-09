@@ -106,7 +106,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA-v1.0.ecore#//PropertiesDefinitionType/type"/>
     </genClasses>
     <genClasses ecoreClass="TOSCA-v1.0.ecore#//PropertiesType">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TOSCA-v1.0.ecore#//PropertiesType/map"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute TOSCA-v1.0.ecore#//PropertiesType/any"/>
     </genClasses>
     <genClasses ecoreClass="TOSCA-v1.0.ecore#//PropertiesTypeWithPropertyMappings">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute TOSCA-v1.0.ecore#//PropertiesTypeWithPropertyMappings/any"/>
@@ -437,14 +437,6 @@
     </genClasses>
     <genClasses ecoreClass="TOSCA-v1.0.ecore#//ValidTargetType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA-v1.0.ecore#//ValidTargetType/typeRef"/>
-    </genClasses>
-    <genClasses ecoreClass="TOSCA-v1.0.ecore#//EFeatureMapType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA-v1.0.ecore#//EFeatureMapType/id"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference TOSCA-v1.0.ecore#//EFeatureMapType/propertyKeyValuePair"/>
-    </genClasses>
-    <genClasses ecoreClass="TOSCA-v1.0.ecore#//EFeatureMapEntryType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA-v1.0.ecore#//EFeatureMapEntryType/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute TOSCA-v1.0.ecore#//EFeatureMapEntryType/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -153,8 +153,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropertiesType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="map" lowerBound="1" eType="#//EFeatureMapType"
-        containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="any" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropertiesTypeWithPropertyMappings">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="any" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFeatureMapEntry"/>
@@ -371,8 +370,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//AnyURI"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TEntityTemplate" abstract="true" eSuperTypes="#//TExtensibleElements">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" eType="#//PropertiesType"
-        containment="true" resolveProxies="false"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//PropertiesType" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="propertyConstraints" eType="#//PropertyConstraintsType"
         containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//ID"
@@ -737,15 +736,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="ValidTargetType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeRef" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//ID"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="propertyKeyValuePair" upperBound="-1"
-        eType="#//EFeatureMapEntryType" containment="true" resolveProxies="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EFeatureMapEntryType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//QName"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
 </ecore:EPackage>

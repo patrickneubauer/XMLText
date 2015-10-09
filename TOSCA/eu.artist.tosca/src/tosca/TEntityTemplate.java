@@ -4,6 +4,8 @@ package tosca;
 
 import javax.xml.namespace.QName;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>TEntity Template</b></em>'.
@@ -25,30 +27,20 @@ import javax.xml.namespace.QName;
  */
 public interface TEntityTemplate extends TExtensibleElements {
 	/**
-	 * Returns the value of the '<em><b>Properties</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
+	 * The list contents are of type {@link tosca.PropertiesType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Properties</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Properties</em>' containment reference.
-	 * @see #setProperties(PropertiesType)
+	 * @return the value of the '<em>Properties</em>' containment reference list.
 	 * @see tosca.ToscaPackage#getTEntityTemplate_Properties()
 	 * @model containment="true"
 	 * @generated
 	 */
-	PropertiesType getProperties();
-
-	/**
-	 * Sets the value of the '{@link tosca.TEntityTemplate#getProperties <em>Properties</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Properties</em>' containment reference.
-	 * @see #getProperties()
-	 * @generated
-	 */
-	void setProperties(PropertiesType value);
+	EList<PropertiesType> getProperties();
 
 	/**
 	 * Returns the value of the '<em><b>Property Constraints</b></em>' containment reference.

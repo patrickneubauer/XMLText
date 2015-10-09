@@ -6,48 +6,48 @@
     <extension
             point="org.eclipse.ui.editors">
         <editor
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.XtextEditor"
             contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
             default="true"
-            extensions="tml"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-            name="ToscaMarkupLanguage Editor">
+            extensions="tdsl"
+            id="eu.artist.tosca.dsl.ToscaDSL"
+            name="ToscaDSL Editor">
         </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
         <handler
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler"
             commandId="org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration">
             <activeWhen>
                 <reference
-                    definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+                    definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
         <handler
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
-            commandId="eu.artist.tosca.dsl.ToscaMarkupLanguage.validate">
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.handler.ValidateActionHandler"
+            commandId="eu.artist.tosca.dsl.ToscaDSL.validate">
          <activeWhen>
             <reference
-                    definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+                    definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
             </reference>
          </activeWhen>
       	</handler>
       	<!-- copy qualified name -->
         <handler
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName">
             <activeWhen>
-				<reference definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened" />
+				<reference definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened" />
             </activeWhen>
         </handler>
         <handler
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedNameHandler"
             commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.OutlineCopyQualifiedName">
             <activeWhen>
             	<and>
-            		<reference definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.XtextEditor.opened" />
+            		<reference definitionId="eu.artist.tosca.dsl.ToscaDSL.XtextEditor.opened" />
 	                <iterate>
 						<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 					</iterate>
@@ -56,22 +56,22 @@
         </handler>
     </extension>
     <extension point="org.eclipse.core.expressions.definitions">
-        <definition id="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+        <definition id="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
             <and>
                 <reference definitionId="isActiveEditorAnInstanceOfXtextEditor"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="eu.artist.tosca.dsl.ToscaMarkupLanguage" 
+                        value="eu.artist.tosca.dsl.ToscaDSL" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
         </definition>
-        <definition id="eu.artist.tosca.dsl.ToscaMarkupLanguage.XtextEditor.opened">
+        <definition id="eu.artist.tosca.dsl.ToscaDSL.XtextEditor.opened">
             <and>
                 <reference definitionId="isXtextEditorActive"/>
                 <with variable="activeEditor">
                     <test property="org.eclipse.xtext.ui.editor.XtextEditor.languageName" 
-                        value="eu.artist.tosca.dsl.ToscaMarkupLanguage" 
+                        value="eu.artist.tosca.dsl.ToscaDSL" 
                         forcePluginActivation="true"/>
                 </with>        
             </and>
@@ -80,33 +80,33 @@
     <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-            name="ToscaMarkupLanguage">
-            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"/>
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="eu.artist.tosca.dsl.ToscaDSL"
+            name="ToscaDSL">
+            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"/>
         </page>
         <page
-            category="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage.coloring"
+            category="eu.artist.tosca.dsl.ToscaDSL"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.syntaxcoloring.SyntaxColoringPreferencePage"
+            id="eu.artist.tosca.dsl.ToscaDSL.coloring"
             name="Syntax Coloring">
-            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"/>
+            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"/>
         </page>
         <page
-            category="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage.templates"
+            category="eu.artist.tosca.dsl.ToscaDSL"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.templates.XtextTemplatePreferencePage"
+            id="eu.artist.tosca.dsl.ToscaDSL.templates"
             name="Templates">
-            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"/>
+            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-            name="ToscaMarkupLanguage">
-            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"/>
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+            id="eu.artist.tosca.dsl.ToscaDSL"
+            name="ToscaDSL">
+            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -116,14 +116,14 @@
     <extension
         point="org.eclipse.ui.keywords">
         <keyword
-            id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"
-            label="ToscaMarkupLanguage"/>
+            id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"
+            label="ToscaDSL"/>
     </extension>
     <extension
          point="org.eclipse.ui.commands">
       <command
             description="Trigger expensive validation"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage.validate"
+            id="eu.artist.tosca.dsl.ToscaDSL.validate"
             name="Validate">
       </command>
       <!-- copy qualified name -->
@@ -144,12 +144,12 @@
         <menuContribution
             locationURI="popup:#TextEditorContext?after=group.edit">
              <command
-                 commandId="eu.artist.tosca.dsl.ToscaMarkupLanguage.validate"
+                 commandId="eu.artist.tosca.dsl.ToscaDSL.validate"
                  style="push"
                  tooltip="Trigger expensive validation">
             <visibleWhen checkEnabled="false">
                 <reference
-                    definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+                    definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
                 </reference>
             </visibleWhen>
          </command>  
@@ -159,7 +159,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName" 
          		style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened" />
+                	<reference definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -167,7 +167,7 @@
          	<command commandId="org.eclipse.xtext.ui.editor.copyqualifiedname.EditorCopyQualifiedName"
             	style="push" tooltip="Copy Qualified Name">
             	<visibleWhen checkEnabled="false">
-                	<reference definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened" />
+                	<reference definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened" />
             	</visibleWhen>
          	</command>  
          </menuContribution>
@@ -176,7 +176,7 @@
 				style="push" tooltip="Copy Qualified Name">
          		<visibleWhen checkEnabled="false">
 	            	<and>
-	            		<reference definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.XtextEditor.opened" />
+	            		<reference definitionId="eu.artist.tosca.dsl.ToscaDSL.XtextEditor.opened" />
 						<iterate>
 							<adapt type="org.eclipse.xtext.ui.editor.outline.IOutlineNode" />
 						</iterate>
@@ -189,7 +189,7 @@
 		<menuContribution locationURI="popup:#TextEditorContext?endof=group.find">
 			<command commandId="org.eclipse.xtext.ui.editor.FindReferences">
 				<visibleWhen checkEnabled="false">
-                	<reference definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+                	<reference definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
                 	</reference>
             	</visibleWhen>
 			</command>
@@ -197,11 +197,11 @@
 	</extension>
 	<extension point="org.eclipse.ui.handlers">
 	    <handler
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.findrefs.FindReferencesHandler"
             commandId="org.eclipse.xtext.ui.editor.FindReferences">
             <activeWhen>
                 <reference
-                    definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+                    definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
                 </reference>
             </activeWhen>
         </handler>
@@ -212,36 +212,36 @@
 	<extension
 		point="org.eclipse.emf.ecore.extension_parser">
 		<parser
-			class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
-			type="tml">
+			class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.resource.IResourceFactory"
+			type="tdsl">
 		</parser>
 	</extension>
 	<extension point="org.eclipse.xtext.extension_resourceServiceProvider">
         <resourceServiceProvider
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
-            uriExtension="tml">
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.resource.IResourceUIServiceProvider"
+            uriExtension="tdsl">
         </resourceServiceProvider>
     </extension>
 
 
-	<!-- marker definitions for eu.artist.tosca.dsl.ToscaMarkupLanguage -->
+	<!-- marker definitions for eu.artist.tosca.dsl.ToscaDSL -->
 	<extension
-	        id="toscamarkuplanguage.check.fast"
-	        name="ToscaMarkupLanguage Problem"
+	        id="toscadsl.check.fast"
+	        name="ToscaDSL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.fast"/>
 	    <persistent value="true"/>
 	</extension>
 	<extension
-	        id="toscamarkuplanguage.check.normal"
-	        name="ToscaMarkupLanguage Problem"
+	        id="toscadsl.check.normal"
+	        name="ToscaDSL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.normal"/>
 	    <persistent value="true"/>
 	</extension>
 	<extension
-	        id="toscamarkuplanguage.check.expensive"
-	        name="ToscaMarkupLanguage Problem"
+	        id="toscadsl.check.expensive"
+	        name="ToscaDSL Problem"
 	        point="org.eclipse.core.resources.markers">
 	    <super type="org.eclipse.xtext.ui.check.expensive"/>
 	    <persistent value="true"/>
@@ -250,29 +250,29 @@
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
-            fileExtensions="tml"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant"
+            fileExtensions="tdsl"
             >
       </participant>
    </extension>
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            category="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage.compiler.preferencePage"
+            category="eu.artist.tosca.dsl.ToscaDSL"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="eu.artist.tosca.dsl.ToscaDSL.compiler.preferencePage"
             name="Compiler">
-            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"/>
+            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"/>
         </page>
     </extension>
     <extension
             point="org.eclipse.ui.propertyPages">
         <page
-            category="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="eu.artist.tosca.dsl.ToscaMarkupLanguage.compiler.propertyPage"
+            category="eu.artist.tosca.dsl.ToscaDSL"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
+            id="eu.artist.tosca.dsl.ToscaDSL.compiler.propertyPage"
             name="Compiler">
-            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"/>
+            <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"/>
             <enabledWhen>
 	            <adapt type="org.eclipse.core.resources.IProject"/>
 			</enabledWhen>
@@ -284,11 +284,11 @@
 	<extension
 		point="org.eclipse.ui.handlers">
 		<handler 
-			class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
+			class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.outline.quickoutline.ShowQuickOutlineActionHandler"
 			commandId="org.eclipse.xtext.ui.editor.outline.QuickOutline">
 			<activeWhen>
 				<reference
-					definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+					definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -308,33 +308,33 @@
 				style="push"
 				tooltip="Open Quick Outline">
 				<visibleWhen checkEnabled="false">
-					<reference definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened"/>
+					<reference definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened"/>
 				</visibleWhen>
 			</command>
 		</menuContribution>
 	</extension>
-    <!-- quickfix marker resolution generator for eu.artist.tosca.dsl.ToscaMarkupLanguage -->
+    <!-- quickfix marker resolution generator for eu.artist.tosca.dsl.ToscaDSL -->
     <extension
             point="org.eclipse.ui.ide.markerResolution">
         <markerResolutionGenerator
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="eu.artist.tosca.dsl.ui.toscamarkuplanguage.check.fast">
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="eu.artist.tosca.dsl.ui.toscadsl.check.fast">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="eu.artist.tosca.dsl.ui.toscamarkuplanguage.check.normal">
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="eu.artist.tosca.dsl.ui.toscadsl.check.normal">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
             </attribute>
         </markerResolutionGenerator>
         <markerResolutionGenerator
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
-            markerType="eu.artist.tosca.dsl.ui.toscamarkuplanguage.check.expensive">
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="eu.artist.tosca.dsl.ui.toscadsl.check.expensive">
             <attribute
                 name="FIXABLE_KEY"
                 value="true">
@@ -344,11 +344,11 @@
    	<!-- Rename Refactoring -->
 	<extension point="org.eclipse.ui.handlers">
 		<handler 
-			class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
+			class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.DefaultRenameElementHandler"
 			commandId="org.eclipse.xtext.ui.refactoring.RenameElement">
 			<activeWhen>
 				<reference
-					definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+					definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
 				</reference>
 			</activeWhen>
 		</handler>
@@ -360,7 +360,7 @@
                style="push">
             <visibleWhen checkEnabled="false">
                <reference
-                     definitionId="eu.artist.tosca.dsl.ToscaMarkupLanguage.Editor.opened">
+                     definitionId="eu.artist.tosca.dsl.ToscaDSL.Editor.opened">
                </reference>
             </visibleWhen>
          </command>
@@ -368,30 +368,30 @@
    </extension>
    <extension point="org.eclipse.ui.preferencePages">
 	    <page
-	        category="eu.artist.tosca.dsl.ToscaMarkupLanguage"
-	        class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
-	        id="eu.artist.tosca.dsl.ToscaMarkupLanguage.refactoring"
+	        category="eu.artist.tosca.dsl.ToscaDSL"
+	        class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.refactoring.ui.RefactoringPreferencePage"
+	        id="eu.artist.tosca.dsl.ToscaDSL.refactoring"
 	        name="Refactoring">
-	        <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaMarkupLanguage"/>
+	        <keywordReference id="eu.artist.tosca.dsl.ui.keyword_ToscaDSL"/>
 	    </page>
 	</extension>
 
   <extension point="org.eclipse.compare.contentViewers">
-    <viewer id="eu.artist.tosca.dsl.ToscaMarkupLanguage.compare.contentViewers"
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="tml">
+    <viewer id="eu.artist.tosca.dsl.ToscaDSL.compare.contentViewers"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="tdsl">
     </viewer>
   </extension>
   <extension point="org.eclipse.compare.contentMergeViewers">
-    <viewer id="eu.artist.tosca.dsl.ToscaMarkupLanguage.compare.contentMergeViewers"
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
-            extensions="tml" label="ToscaMarkupLanguage Compare">
+    <viewer id="eu.artist.tosca.dsl.ToscaDSL.compare.contentMergeViewers"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.compare.InjectableViewerCreator"
+            extensions="tdsl" label="ToscaDSL Compare">
      </viewer>
   </extension>
   <extension point="org.eclipse.ui.editors.documentProviders">
-    <provider id="eu.artist.tosca.dsl.ToscaMarkupLanguage.editors.documentProviders"
-            class="eu.artist.tosca.dsl.ui.ToscaMarkupLanguageExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
-            extensions="tml">
+    <provider id="eu.artist.tosca.dsl.ToscaDSL.editors.documentProviders"
+            class="eu.artist.tosca.dsl.ui.ToscaDSLExecutableExtensionFactory:org.eclipse.xtext.ui.editor.model.XtextDocumentProvider"
+            extensions="tdsl">
     </provider>
   </extension>
 

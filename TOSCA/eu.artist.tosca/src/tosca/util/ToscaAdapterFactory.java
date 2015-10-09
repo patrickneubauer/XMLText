@@ -440,14 +440,6 @@ public class ToscaAdapterFactory extends AdapterFactoryImpl {
 				return createValidTargetTypeAdapter();
 			}
 			@Override
-			public Adapter caseEFeatureMapType(EFeatureMapType object) {
-				return createEFeatureMapTypeAdapter();
-			}
-			@Override
-			public Adapter caseEFeatureMapEntryType(EFeatureMapEntryType object) {
-				return createEFeatureMapEntryTypeAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -1766,34 +1758,6 @@ public class ToscaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createValidTargetTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link tosca.EFeatureMapType <em>EFeature Map Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see tosca.EFeatureMapType
-	 * @generated
-	 */
-	public Adapter createEFeatureMapTypeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link tosca.EFeatureMapEntryType <em>EFeature Map Entry Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see tosca.EFeatureMapEntryType
-	 * @generated
-	 */
-	public Adapter createEFeatureMapEntryTypeAdapter() {
 		return null;
 	}
 

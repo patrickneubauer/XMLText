@@ -287,10 +287,6 @@ public class ToscaValidator extends EObjectValidator {
 				return validateValidSourceType((ValidSourceType)value, diagnostics, context);
 			case ToscaPackage.VALID_TARGET_TYPE:
 				return validateValidTargetType((ValidTargetType)value, diagnostics, context);
-			case ToscaPackage.EFEATURE_MAP_TYPE:
-				return validateEFeatureMapType((EFeatureMapType)value, diagnostics, context);
-			case ToscaPackage.EFEATURE_MAP_ENTRY_TYPE:
-				return validateEFeatureMapEntryType((EFeatureMapEntryType)value, diagnostics, context);
 			case ToscaPackage.MAX_INSTANCES_TYPE_MEMBER1:
 				return validateMaxInstancesTypeMember1((MaxInstancesTypeMember1)value, diagnostics, context);
 			case ToscaPackage.TBOOLEAN:
@@ -1161,24 +1157,6 @@ public class ToscaValidator extends EObjectValidator {
 	 */
 	public boolean validateValidTargetType(ValidTargetType validTargetType, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return validate_EveryDefaultConstraint(validTargetType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEFeatureMapType(EFeatureMapType eFeatureMapType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(eFeatureMapType, diagnostics, context);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean validateEFeatureMapEntryType(EFeatureMapEntryType eFeatureMapEntryType, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(eFeatureMapEntryType, diagnostics, context);
 	}
 
 	/**

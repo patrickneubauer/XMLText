@@ -4,11 +4,18 @@ import java.io.File;
 import java.io.IOException;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.eclipse.emf.ecore.resource.impl.ResourceFactoryRegistryImpl;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMLResource;
+import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.emf.ecore.xmi.impl.XMLResourceFactoryImpl;
+import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
+import tosca.util.ToscaResourceFactoryImpl;
 import eu.artist.tosca.dsl.serializer.TMLSerializer;
 
 /**
@@ -24,6 +31,25 @@ import eu.artist.tosca.dsl.serializer.TMLSerializer;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SerializerTestMoodleByIaasModified {
 
+	ResourceSet resourceSet = null;
+	
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		resourceSet = new ResourceSetImpl();
+		
+		ResourceFactoryRegistryImpl.INSTANCE.getExtensionToFactoryMap()
+			.put("tml", new ToscaResourceFactoryImpl());
+	
+		ResourceFactoryRegistryImpl.INSTANCE.getExtensionToFactoryMap()
+			.put("xmi", new XMIResourceFactoryImpl());
+		
+		ResourceFactoryRegistryImpl.INSTANCE.getExtensionToFactoryMap()
+			.put("xml", new XMLResourceFactoryImpl());
+	}
+	
 	private static final String INPUT_MODEL = "models/Moodle-by-Iaas/Definitions/modified/Moodle-Definitions-modified.xml"; // must end with .xml
 	private static final String OUTPUT_MODEL_PATH = "models/Moodle-by-Iaas/Definitions/modified/generated/"; // must end with /
 
@@ -61,7 +87,8 @@ public class SerializerTestMoodleByIaasModified {
 
 	@Test
 	public void _5_xmlToTmlDirectlyTest() throws IOException {
-		URI inputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_reverse.xml")).getAbsolutePath());
+//		URI inputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_reverse.xml")).getAbsolutePath());
+		URI inputModelResourceURI = URI.createFileURI(new File(INPUT_MODEL.substring(0, INPUT_MODEL.length() - 4).concat(".xml")).getAbsolutePath());		
 		URI outputModelResourceURI = URI.createFileURI(new File(OUTPUT_MODEL_PATH + INPUT_MODEL.substring(INPUT_MODEL.lastIndexOf('/'), INPUT_MODEL.lastIndexOf('.')).concat("_directly.tml")).getAbsolutePath());
 		TMLSerializer serializer = new TMLSerializer();
 		serializer.writeOutput(inputModelResourceURI, outputModelResourceURI, XMLResource.OPTION_EXTENDED_META_DATA);

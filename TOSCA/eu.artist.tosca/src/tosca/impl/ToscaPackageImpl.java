@@ -24,8 +24,6 @@ import tosca.ConstraintsType;
 import tosca.DefinitionsType;
 import tosca.DerivedFromType;
 import tosca.DocumentRoot;
-import tosca.EFeatureMapEntryType;
-import tosca.EFeatureMapType;
 import tosca.ExcludeType;
 import tosca.ExtensionsType;
 import tosca.ImplementationArtifactType;
@@ -783,20 +781,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eFeatureMapTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass eFeatureMapEntryTypeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum maxInstancesTypeMember1EEnum = null;
 
 	/**
@@ -1461,8 +1445,8 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPropertiesType_Map() {
-		return (EReference)propertiesTypeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getPropertiesType_Any() {
+		return (EAttribute)propertiesTypeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -3846,60 +3830,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEFeatureMapType() {
-		return eFeatureMapTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEFeatureMapType_Id() {
-		return (EAttribute)eFeatureMapTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEFeatureMapType_PropertyKeyValuePair() {
-		return (EReference)eFeatureMapTypeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEFeatureMapEntryType() {
-		return eFeatureMapEntryTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEFeatureMapEntryType_Name() {
-		return (EAttribute)eFeatureMapEntryTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEFeatureMapEntryType_Value() {
-		return (EAttribute)eFeatureMapEntryTypeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getMaxInstancesTypeMember1() {
 		return maxInstancesTypeMember1EEnum;
 	}
@@ -4136,7 +4066,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		createEAttribute(propertiesDefinitionTypeEClass, PROPERTIES_DEFINITION_TYPE__TYPE);
 
 		propertiesTypeEClass = createEClass(PROPERTIES_TYPE);
-		createEReference(propertiesTypeEClass, PROPERTIES_TYPE__MAP);
+		createEAttribute(propertiesTypeEClass, PROPERTIES_TYPE__ANY);
 
 		propertiesTypeWithPropertyMappingsEClass = createEClass(PROPERTIES_TYPE_WITH_PROPERTY_MAPPINGS);
 		createEAttribute(propertiesTypeWithPropertyMappingsEClass, PROPERTIES_TYPE_WITH_PROPERTY_MAPPINGS__ANY);
@@ -4470,14 +4400,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		validTargetTypeEClass = createEClass(VALID_TARGET_TYPE);
 		createEAttribute(validTargetTypeEClass, VALID_TARGET_TYPE__TYPE_REF);
 
-		eFeatureMapTypeEClass = createEClass(EFEATURE_MAP_TYPE);
-		createEAttribute(eFeatureMapTypeEClass, EFEATURE_MAP_TYPE__ID);
-		createEReference(eFeatureMapTypeEClass, EFEATURE_MAP_TYPE__PROPERTY_KEY_VALUE_PAIR);
-
-		eFeatureMapEntryTypeEClass = createEClass(EFEATURE_MAP_ENTRY_TYPE);
-		createEAttribute(eFeatureMapEntryTypeEClass, EFEATURE_MAP_ENTRY_TYPE__NAME);
-		createEAttribute(eFeatureMapEntryTypeEClass, EFEATURE_MAP_ENTRY_TYPE__VALUE);
-
 		// Create enums
 		maxInstancesTypeMember1EEnum = createEEnum(MAX_INSTANCES_TYPE_MEMBER1);
 		tBooleanEEnum = createEEnum(TBOOLEAN);
@@ -4641,7 +4563,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		initEAttribute(getPropertiesDefinitionType_Type(), theXMLTypePackage.getQName(), "type", null, 0, 1, PropertiesDefinitionType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propertiesTypeEClass, PropertiesType.class, "PropertiesType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPropertiesType_Map(), this.getEFeatureMapType(), null, "map", null, 1, 1, PropertiesType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPropertiesType_Any(), ecorePackage.getEFeatureMapEntry(), "any", null, 1, 1, PropertiesType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(propertiesTypeWithPropertyMappingsEClass, PropertiesTypeWithPropertyMappings.class, "PropertiesTypeWithPropertyMappings", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPropertiesTypeWithPropertyMappings_Any(), ecorePackage.getEFeatureMapEntry(), "any", null, 1, 1, PropertiesTypeWithPropertyMappings.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4768,7 +4690,7 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 		initEAttribute(getTDocumentation_Source(), theXMLTypePackage.getAnyURI(), "source", null, 0, 1, TDocumentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tEntityTemplateEClass, TEntityTemplate.class, "TEntityTemplate", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTEntityTemplate_Properties(), this.getPropertiesType(), null, "properties", null, 0, 1, TEntityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTEntityTemplate_Properties(), this.getPropertiesType(), null, "properties", null, 0, -1, TEntityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTEntityTemplate_PropertyConstraints(), this.getPropertyConstraintsType(), null, "propertyConstraints", null, 0, 1, TEntityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTEntityTemplate_Id(), theXMLTypePackage.getID(), "id", null, 1, 1, TEntityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTEntityTemplate_Type(), theXMLTypePackage.getQName(), "type", null, 1, 1, TEntityTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4974,14 +4896,6 @@ public class ToscaPackageImpl extends EPackageImpl implements ToscaPackage {
 
 		initEClass(validTargetTypeEClass, ValidTargetType.class, "ValidTargetType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getValidTargetType_TypeRef(), theXMLTypePackage.getQName(), "typeRef", null, 1, 1, ValidTargetType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(eFeatureMapTypeEClass, EFeatureMapType.class, "EFeatureMapType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEFeatureMapType_Id(), theXMLTypePackage.getID(), "id", null, 1, 1, EFeatureMapType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEFeatureMapType_PropertyKeyValuePair(), this.getEFeatureMapEntryType(), null, "propertyKeyValuePair", null, 0, -1, EFeatureMapType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(eFeatureMapEntryTypeEClass, EFeatureMapEntryType.class, "EFeatureMapEntryType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEFeatureMapEntryType_Name(), theXMLTypePackage.getQName(), "name", null, 0, 1, EFeatureMapEntryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEFeatureMapEntryType_Value(), theXMLTypePackage.getString(), "value", null, 0, 1, EFeatureMapEntryType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(maxInstancesTypeMember1EEnum, MaxInstancesTypeMember1.class, "MaxInstancesTypeMember1");

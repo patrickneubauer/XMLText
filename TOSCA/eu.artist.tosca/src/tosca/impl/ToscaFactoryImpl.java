@@ -155,8 +155,6 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 			case ToscaPackage.TYPES_TYPE: return createTypesType();
 			case ToscaPackage.VALID_SOURCE_TYPE: return createValidSourceType();
 			case ToscaPackage.VALID_TARGET_TYPE: return createValidTargetType();
-			case ToscaPackage.EFEATURE_MAP_TYPE: return createEFeatureMapType();
-			case ToscaPackage.EFEATURE_MAP_ENTRY_TYPE: return createEFeatureMapEntryType();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -1156,26 +1154,6 @@ public class ToscaFactoryImpl extends EFactoryImpl implements ToscaFactory {
 	public ValidTargetType createValidTargetType() {
 		ValidTargetTypeImpl validTargetType = new ValidTargetTypeImpl();
 		return validTargetType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EFeatureMapType createEFeatureMapType() {
-		EFeatureMapTypeImpl eFeatureMapType = new EFeatureMapTypeImpl();
-		return eFeatureMapType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EFeatureMapEntryType createEFeatureMapEntryType() {
-		EFeatureMapEntryTypeImpl eFeatureMapEntryType = new EFeatureMapEntryTypeImpl();
-		return eFeatureMapEntryType;
 	}
 
 	/**

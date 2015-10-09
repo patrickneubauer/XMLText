@@ -2,15 +2,17 @@
  */
 package tosca.impl;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import tosca.EFeatureMapType;
+import org.eclipse.emf.ecore.util.BasicFeatureMap;
+import org.eclipse.emf.ecore.util.FeatureMap;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import tosca.PropertiesType;
 import tosca.ToscaPackage;
 
@@ -21,7 +23,7 @@ import tosca.ToscaPackage;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link tosca.impl.PropertiesTypeImpl#getMap <em>Map</em>}</li>
+ *   <li>{@link tosca.impl.PropertiesTypeImpl#getAny <em>Any</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,14 +31,14 @@ import tosca.ToscaPackage;
  */
 public class PropertiesTypeImpl extends MinimalEObjectImpl.Container implements PropertiesType {
 	/**
-	 * The cached value of the '{@link #getMap() <em>Map</em>}' containment reference.
+	 * The cached value of the '{@link #getAny() <em>Any</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMap()
+	 * @see #getAny()
 	 * @generated
 	 * @ordered
 	 */
-	protected EFeatureMapType map;
+	protected FeatureMap any;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,42 +64,11 @@ public class PropertiesTypeImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EFeatureMapType getMap() {
-		return map;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetMap(EFeatureMapType newMap, NotificationChain msgs) {
-		EFeatureMapType oldMap = map;
-		map = newMap;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ToscaPackage.PROPERTIES_TYPE__MAP, oldMap, newMap);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public FeatureMap getAny() {
+		if (any == null) {
+			any = new BasicFeatureMap(this, ToscaPackage.PROPERTIES_TYPE__ANY);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMap(EFeatureMapType newMap) {
-		if (newMap != map) {
-			NotificationChain msgs = null;
-			if (map != null)
-				msgs = ((InternalEObject)map).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.PROPERTIES_TYPE__MAP, null, msgs);
-			if (newMap != null)
-				msgs = ((InternalEObject)newMap).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ToscaPackage.PROPERTIES_TYPE__MAP, null, msgs);
-			msgs = basicSetMap(newMap, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ToscaPackage.PROPERTIES_TYPE__MAP, newMap, newMap));
+		return any;
 	}
 
 	/**
@@ -108,8 +79,8 @@ public class PropertiesTypeImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ToscaPackage.PROPERTIES_TYPE__MAP:
-				return basicSetMap(null, msgs);
+			case ToscaPackage.PROPERTIES_TYPE__ANY:
+				return ((InternalEList<?>)getAny()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -122,8 +93,9 @@ public class PropertiesTypeImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ToscaPackage.PROPERTIES_TYPE__MAP:
-				return getMap();
+			case ToscaPackage.PROPERTIES_TYPE__ANY:
+				if (coreType) return getAny();
+				return ((FeatureMap.Internal)getAny()).getWrapper();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -136,8 +108,8 @@ public class PropertiesTypeImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ToscaPackage.PROPERTIES_TYPE__MAP:
-				setMap((EFeatureMapType)newValue);
+			case ToscaPackage.PROPERTIES_TYPE__ANY:
+				((FeatureMap.Internal)getAny()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -151,8 +123,8 @@ public class PropertiesTypeImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.PROPERTIES_TYPE__MAP:
-				setMap((EFeatureMapType)null);
+			case ToscaPackage.PROPERTIES_TYPE__ANY:
+				getAny().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -166,10 +138,26 @@ public class PropertiesTypeImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ToscaPackage.PROPERTIES_TYPE__MAP:
-				return map != null;
+			case ToscaPackage.PROPERTIES_TYPE__ANY:
+				return any != null && !any.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (any: ");
+		result.append(any);
+		result.append(')');
+		return result.toString();
 	}
 
 } //PropertiesTypeImpl

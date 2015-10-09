@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -20,8 +21,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import tosca.PropertiesType;
-import tosca.ToscaFactory;
 import tosca.ToscaPackage;
 
 /**
@@ -75,7 +76,7 @@ public class PropertiesTypeItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ToscaPackage.Literals.PROPERTIES_TYPE__MAP);
+			childrenFeatures.add(ToscaPackage.Literals.PROPERTIES_TYPE__ANY);
 		}
 		return childrenFeatures;
 	}
@@ -128,7 +129,7 @@ public class PropertiesTypeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PropertiesType.class)) {
-			case ToscaPackage.PROPERTIES_TYPE__MAP:
+			case ToscaPackage.PROPERTIES_TYPE__ANY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -145,11 +146,6 @@ public class PropertiesTypeItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ToscaPackage.Literals.PROPERTIES_TYPE__MAP,
-				 ToscaFactory.eINSTANCE.createEFeatureMapType()));
 	}
 
 	/**

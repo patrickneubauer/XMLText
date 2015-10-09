@@ -23,4 +23,4 @@ Export-Package: eu.artist.tosca.dsl.ui.quickfix,
  eu.artist.tosca.dsl.ui.contentassist,
  eu.artist.tosca.dsl.ui.contentassist.antlr,
  eu.artist.tosca.dsl.ui.internal
-Bundle-Activator: eu.artist.tosca.dsl.ui.internal.ToscaMarkupLanguageActivator
+Bundle-Activator: eu.artist.tosca.dsl.ui.internal.ToscaDSLActivator
