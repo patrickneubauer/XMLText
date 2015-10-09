@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ToscaDSLModeling/Moodle-Definitions.tml&apos; to &apos;Moodle-Definitions.tdsl&apos;" description="Rename resource &apos;Moodle-Definitions.tml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Moodle-Definitions.tml" name="Moodle-Definitions.tdsl" stamp="1444387985125" updateReferences="true"/>
+</session>
