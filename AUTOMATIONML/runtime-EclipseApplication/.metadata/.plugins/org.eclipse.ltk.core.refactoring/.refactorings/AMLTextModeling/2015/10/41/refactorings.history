@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;AMLTextModeling/ExampleTopology.xaml&apos; to &apos;ExampleTopology.amltext&apos;" description="Rename resource &apos;ExampleTopology.xaml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ExampleTopology.xaml" name="ExampleTopology.amltext" stamp="1444208408350" updateReferences="true"/>
+</session>
