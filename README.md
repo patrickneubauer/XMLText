@@ -1,4 +1,4 @@
-![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.svg)
+![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.png)
 # XMLText
 XMLText: From XML Schema to Xtext
 
