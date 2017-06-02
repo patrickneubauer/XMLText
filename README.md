@@ -1,5 +1,5 @@
 # From XML Schema to Xtext with XMLText
-![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.png)
+![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.svg)
 
 A multitude of Domain-Specific Languages (DSLs) have been implemented with XML Schemas.
 While such DSLs are well adopted and flexible, they miss modern DSL editor functionality.
