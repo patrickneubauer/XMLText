@@ -1,6 +1,6 @@
-(!) This project is now part of [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) and hence no longer maintained in this repository -- please check out the [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) repository.
+#(!) This project has been integrated as a module of [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) -- please check out the [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) repository.
 
-# From XML Schema to Xtext with XMLText
+### From XML Schema to Xtext with XMLText
 ![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.png)
 
 A multitude of Domain-Specific Languages (DSLs) have been implemented with XML Schemas.
