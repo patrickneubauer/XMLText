@@ -1,3 +1,5 @@
+(!) This project is now part of [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) and hence no longer maintained in this repository -- please check out the [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) repository.
+
 # From XML Schema to Xtext with XMLText
 ![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.png)
 
