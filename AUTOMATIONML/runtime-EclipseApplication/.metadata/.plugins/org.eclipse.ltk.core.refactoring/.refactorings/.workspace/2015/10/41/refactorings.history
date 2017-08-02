@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;XAMLmodeling&apos; to &apos;AMLTextModeling&apos;" description="Rename resource &apos;XAMLmodeling&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/XAMLmodeling" name="AMLTextModeling" stamp="1444208391263" updateReferences="true"/>
-</session>
