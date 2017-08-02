@@ -1,4 +1,4 @@
-#(!) This project has been integrated as a module of [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) -- please check out the [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) repository.
+# (!) This project has been integrated as a module of [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) -- please check out the [XMLIntellEdit](https://github.com/patrickneubauer/XMLIntellEdit) repository.
 
 ### From XML Schema to Xtext with XMLText
 ![Logo](http://xmltext.big.tuwien.ac.at/XMLTextLogo.png)
